@@ -1,0 +1,2496 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>AIP Holidays </title>
+    <meta name="author" content="AIP Holidays">
+    <meta name="description" content="AIP Holidays Sdn. Bhd.">
+    <meta name="keywords" content="AIP Holidays Sdn. Bhd.">
+    <meta name="robots" content="INDEX,FOLLOW">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        .counter-card-wrap {
+            margin: 10px 0 25px 0 !important;
+
+            .th-btn.style3 {
+                background-color: #213b6f !important;
+                color: var(--white-color);
+                box-shadow: none;
+                border: none;
+            }
+        }
+
+        .moblie-logo {
+            display: none;
+        }
+
+        @media (max-width: 480px) {
+            #card-container {
+                position: relative;
+                width: 100%;
+                max-width: 360px;
+                margin: auto;
+                overflow: hidden;
+                height: 500px;
+                /* 👈 fix height so card fits fully */
+            }
+
+            #card1,
+            #card2,
+            #card3,
+            #card4 {
+                position: relative;
+                z-index: 9999;
+                /* Bring it to the top */
+                width: 100%;
+                /* Full width */
+                margin: 10px auto;
+                display: block;
+
+            }
+
+            #card-container>div {
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                margin: auto;
+                opacity: 0;
+                transform: scale(0.9);
+                z-index: 999;
+                transition: opacity 0.6s ease, transform 0.6s ease;
+                width: 100%;
+                /* 👈 take full container width */
+                max-width: 300px;
+                /* 👈 control card width */
+            }
+
+            #card-container>div.active {
+                opacity: 1;
+                transform: scale(1);
+                z-index: 9999;
+            }
+        }
+    </style>
+
+    <!-- Mobile Specific Metas -->
+
+
+    <!-- Favicons - Place favicon.ico in the root directory -->
+    <link rel="apple-touch-icon" sizes="57x57" href="assets/img/favicons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="assets/img/favicons/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="assets/img/favicons/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="assets/img/favicons/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="assets/img/favicons/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="assets/img/favicons/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="assets/img/favicons/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="assets/img/favicons/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicons/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/img/favicons/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="assets/img/favicons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicons/favicon-16x16.png">
+    <link rel="manifest" href="assets/img/favicons/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="assets/img/favicons/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <!--==============================
+      Google Fonts
+    ============================== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Manrope:wght@200..800&family=Montez&display=swap"
+        rel="stylesheet">
+
+    <!--==============================
+        All CSS File
+    ============================== -->
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- Fontawesome Icon -->
+    <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+    <!-- Magnific Popup -->
+    <link rel="stylesheet" href="assets/css/magnific-popup.min.css">
+
+    <!-- Swiper css -->
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+
+    <!-- Theme Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+</head>
+
+<body>
+
+    <!--********************************
+   		Code Start From Here 
+	******************************** -->
+
+    <div class="cursor-follower"></div>
+
+    <!--==============================
+     Preloader
+    ==============================-->
+    <div id="preloader" class="preloader ">
+        <div id="loader" class="th-preloader">
+            <div class="preloader">
+                <div class="spinner"></div>
+            </div>
+        </div>
+    </div>
+
+    <!--==============================
+    Sidemenu
+    ============================== -->
+    <div class="sidemenu-wrapper sidemenu-info ">
+        <div class="sidemenu-content">
+            <button class="closeButton sideMenuCls"><i class="far fa-times"></i></button>
+            <div class="widget  ">
+                <div class="th-widget-about">
+                    <div class="about-logo" style="width: 200px;">
+                        <a href="index.html"><img src="assets/img/logo.png" alt="Tourm"></a>
+                    </div>
+                    <p class="about-text">At AIP Holidays, we believe that every journey is a story waiting to be told.
+                    </p>
+                    <div class="th-social">
+                        <a href="https://www.facebook.com/aipholidays"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.twitter.com/"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.linkedin.com/"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://api.whatsapp.com/send/?phone=60142541907&text&type=phone_number&app_absent=0"><i
+                                class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="widget  ">
+                <h3 class="widget_title">Recent Posts</h3>
+                <div class="recent-post-wrap">
+                    <div class="recent-post">
+                        <div class="media-img">
+                            <a href="blog-details.html"><img src="assets/img/blog/recent-post-1-1.jpg"
+                                    alt="Blog Image"></a>
+                        </div>
+                        <div class="media-body">
+                            <div class="recent-post-meta">
+                                <a href="blog.html"><i class="far fa-calendar"></i>24 Jun , 2025</a>
+                            </div>
+                            <h4 class="post-title"><a class="text-inherit" href="blog-details.html">Where Vision Meets
+                                    Concrete
+                                    Reality</a></h4>
+                        </div>
+                    </div>
+                    <div class="recent-post">
+                        <div class="media-img">
+                            <a href="blog-details.html"><img src="assets/img/blog/recent-post-1-2.jpg"
+                                    alt="Blog Image"></a>
+                        </div>
+                        <div class="media-body">
+                            <div class="recent-post-meta">
+                                <a href="blog.html"><i class="far fa-calendar"></i>22 Jun , 2025</a>
+                            </div>
+                            <h4 class="post-title"><a class="text-inherit" href="blog-details.html">Raising the Bar in
+                                    Construction.</a></h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="widget  ">
+                <h3 class="widget_title">Get In Touch</h3>
+                <div class="th-widget-contact">
+                    <div class="info-box_text">
+                        <div class="icon">
+                            <img src="assets/img/icon/phone.svg" alt="img">
+                        </div>
+                        <div class="details">
+                            <p><a href="tel:+60189551767" class="info-box_link">+60 18-955 1767</a></p>
+                            <p><a href="tel:+60142541907" class="info-box_link">+60 14-254 1907</a></p>
+                        </div>
+                    </div>
+                    <div class="info-box_text">
+                        <div class="icon">
+                            <img src="assets/img/icon/envelope.svg" alt="img">
+                        </div>
+                        <div class="details">
+                            <p><a href="mailto:aipholidays.my@gmail.com"
+                                    class="info-box_link">aipholidays.my@gmail.com</a></p>
+                        </div>
+                    </div>
+                    <div class="info-box_text">
+                        <div class="icon"><img src="assets/img/icon/location-dot.svg" alt="img"></div>
+                        <div class="details">
+                            <p>118-B, first floor, Jalan Tun Sambanthan, Brickfields, 50470 Kuala Lumpur</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="popup-search-box">
+        <button class="searchClose"><i class="fal fa-times"></i></button>
+        <form action="#">
+            <input type="text" placeholder="What are you looking for?">
+            <button type="submit"><i class="fal fa-search"></i></button>
+        </form>
+    </div>
+
+    <!--==============================
+    Mobile Menu
+    ============================== -->
+    <div class="th-menu-wrapper onepage-nav">
+        <div class="th-menu-area text-center">
+            <button class="th-menu-toggle"><i class="fal fa-times"></i></button>
+            <div class="mobile-logo" >
+                <a href="/">
+                    <img class="" src="assets/img/logo2.svg" alt="AIP Holidays SDN. BHD">
+                </a>
+            </div>
+            <div class="th-mobile-menu">
+                <ul>
+                    <li class=""><a class="active" href="index.html">Home</a></li>
+                    <li><a href="about-us.html">About Us</a></li>
+                    <li><a href="inbound-tours.html">Inbound Tours</a></li>
+                    <li class="menu-item-has-children">
+                        <a href="#">Outbound Tours</a>
+                        <ul class="sub-menu">
+                            <li>
+                                <a href="outbound-india.html">India</a>
+
+                            </li>
+
+                            <li><a href="srilankaoutbound.html">Srilanka</a></li>
+                            <li><a href="eroupe-outbound.html">Europe</a></li>
+                            <li><a href="bali-outbound.html">Indonesia</a></li>
+                            <li><a href="cambodia-outbound.html">Cambodia</a></li>
+                            <li><a href="vietnam-outbound.html">Vietnam</a></li>
+                            <li><a href="thailand-outbound.html">Thailand</a></li>
+                            <li><a href="japan-outbound.html">Japan</a></li>
+                            <li><a href="dubai-outbound.html">Dubai</a></li>
+                            <li><a href="maldives-outbound.html">Maldives</a></li>
+                            <li><a href="taiwan-outbound.html">Taiwan</a></li>
+                            <li><a href="turkey-outbound.html">Turkey</a></li>
+                            <li><a href="china-outbound.html">Chinaa</a></li>
+                            <li><a href="southkorea-outbound.html">South Korea</a></li>
+                            <li><a href="nepal-outbound.html">Nepal</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="honeymoon-packages.html">Honeymoon Tours</a></li>
+                    <li><a href="service-details.html">Services</a></li>
+                    <li><a href="contact.html">Contact us </a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!--==============================
+    Header Area
+    ==============================-->
+    <header class="th-header header-layout1">
+        <div class="header__top">
+            <div class="header-links">
+                <ul>
+                    <li class="d-none d-xl-inline-block"><i class="fa-sharp fa-regular  fa-location-dot"></i>
+                        <span>118-B, Jalan Tun Sambanthan, Brickfields, Kuala Lumpur</span>
+                    </li>
+                    <li class="d-none d-xl-inline-block"><i class="fa-regular fa-mobile"></i>
+                        <span>Call Us : +60 18-955 1767 | +60 14-254 1907</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="header-links">
+                <ul>
+                    <li class="d-none d-md-inline-block"><a href="faq.html">FAQ</a></li>
+                    <li class="d-none d-md-inline-block"><a href="contact.html">Support</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="sticky-wrapper">
+            <!-- Main Menu Area -->
+            <div class="menu-area">
+                <div class="container th-container">
+                    <div class="row align-items-center justify-content-between">
+                        <div class="col-auto">
+                            <div class="header-logo">
+                                <a href="index.html"><img src="assets/img/logo.png" alt="AIP Holidays"></a>
+                            </div>
+                        </div>
+                        <div class="col-auto me-xl-auto">
+                            <nav class="main-menu d-none d-xl-inline-block">
+                                <ul>
+                                    <li><a class="active" href="index.html">Home</a></li>
+                                    <li><a href="about-us.html">About Us</a></li>
+                                    <li><a href="inbound-tours.html">Inbound Tours</a></li>
+                                    <li class="menu-item-has-children">
+                                        <a href="outbound-tour.html">Outbound Tours</a>
+                                        <ul class="sub-menu">
+                                            <li><a href="outbound-india.html">India</a></li>
+                                            <li><a href="srilankaoutbound.html">Srilanka</a></li>
+                                            <li><a href="eroupe-outbound.html">Europe</a></li>
+                                            <li><a href="bali-outbound.html">Indonesia</a></li>
+                                            <li><a href="cambodia-outbound.html">Cambodia</a></li>
+                                            <li><a href="vietnam-outbound.html">Vietnam</a></li>
+                                            <li><a href="thailand-outbound.html">Thailand</a></li>
+                                            <li><a href="japan-outbound.html">Japan</a></li>
+                                            <li><a href="dubai-outbound.html">Dubai</a></li>
+                                            <li><a href="maldives-outbound.html">Maldives</a></li>
+                                            <li><a href="taiwan-outbound.html">Taiwan</a></li>
+                                            <li><a href="turkey-outbound.html">Turkey</a></li>
+                                            <li><a href="china-outbound.html">Chinaa</a></li>
+                                            <li><a href="southkorea-outbound.html">South Korea</a></li>
+                                            <li><a href="nepal-outbound.html">Nepal</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="honeymoon-packages.html">Honeymoon Tours</a></li>
+                                    <li><a href="service-details.html">Services</a></li>
+                                    <li><a href="contact.html">Contact us</a></li>
+                                </ul>
+                            </nav>
+                            <button type="button" class="th-menu-toggle d-block d-xl-none"><i
+                                    class="far fa-bars"></i></button>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="logo-bg" data-mask-src="assets/img/logo_bg_mask.png"></div>
+            </div>
+        </div>
+    </header>
+
+    <!--==============================
+    Hero Area
+    ==============================-->
+
+    <div class="th-hero-wrapper hero-1" id="hero">
+        <div class="swiper th-slider hero-slider-1" id="heroSlide1"
+            data-slider-options='{"effect":"fade","menu": ["", "", ""],"heroSlide1": {"swiper-container": {"pagination": {"el": ".swiper-pagination", "clickable": true }}}}'>
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="hero-inner">
+                        <div class="th-hero-bg" data-bg-src="assets/img/hero/hero_bg_1_1.jpg">
+                        </div>
+                        <div class="container">
+                            <div class="hero-style1">
+                                <span class="sub-title style1" data-ani="slideinup" data-ani-delay="0.2s">Get
+                                    unforgetable pleasure with us</span>
+                                <h1 class="hero-title" data-ani="slideinup" data-ani-delay="0.4s">
+                                    Natural Wonder of the world </h1>
+                                <div class="btn-group" data-ani="slideinup" data-ani-delay="0.6s">
+                                    <a href="tour.html" class="th-btn th-icon">Explore Tours</a>
+                                    <a href="service.html" class="th-btn style2 th-icon">Our Services</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="hero-inner">
+                        <div class="th-hero-bg" data-bg-src="assets/img/hero/hero_bg_1_2.jpg">
+                        </div>
+                        <div class="container">
+                            <div class="hero-style1">
+                                <span class="sub-title style1" data-ani="slideinup" data-ani-delay="0.2s">Get
+                                    unforgetable pleasure with us</span>
+                                <h1 class="hero-title" data-ani="slideinup" data-ani-delay="0.4s">
+                                    Let’s make your best trip with us </h1>
+                                <div class="btn-group" data-ani="slideinup" data-ani-delay="0.6s">
+                                    <a href="tour.html" class="th-btn th-icon">Explore Tours</a>
+                                    <a href="service.html" class="th-btn style2 th-icon">Our Services</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="hero-inner">
+                        <div class="th-hero-bg" data-bg-src="assets/img/hero/hero_bg_1_3.jpg">
+                        </div>
+                        <div class="container">
+                            <div class="hero-style1">
+                                <span class="sub-title style1" data-ani="slideinup" data-ani-delay="0.2s">Get
+                                    unforgetable pleasure with us</span>
+                                <h1 class="hero-title" data-ani="slideinup" data-ani-delay="0.4s">
+                                    Explore beauty of the whole world </h1>
+                                <div class="btn-group" data-ani="slideinup" data-ani-delay="0.6s">
+                                    <a href="tour.html" class="th-btn th-icon">Explore Tours</a>
+                                    <a href="service.html" class="th-btn style2 th-icon">Our Services</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="th-swiper-custom">
+                <button data-slider-prev="#heroSlide1" class="slider-arrow slider-prev"><img
+                        src="assets/img/icon/right-arrow.svg" alt=""></button>
+                <div class="slider-pagination"></div>
+                <button data-slider-next="#heroSlide1" class="slider-arrow slider-next"><img
+                        src="assets/img/icon/left-arrow.svg" alt=""></button>
+            </div>
+
+        </div>
+    </div>
+    <!--======== / Hero Section ========-->
+
+
+    <!-- ==================================
+    Search Tour by country
+    ================================== -->
+    <section class="country__tours">
+        <div class="container">
+            <div class="section__title__area">
+                <div class="section__sub__title">Search Tour by</div>
+                <div class="section__title">Country</div>
+            </div>
+
+            <!-- Tabs -->
+            <div class="country-tabs-wrapper">
+                <div class="country-tabs">
+                    <button class="country-tab active" data-tab="india">India</button>
+                    <button class="country-tab" data-tab="srilanka">Sri Lanka</button>
+                    <button class="country-tab" data-tab="europe">Europe</button>
+                    <button class="country-tab" data-tab="indonesia">Indonesia</button>
+                    <button class="country-tab" data-tab="cambodia">Cambodia</button>
+                    <button class="country-tab" data-tab="vietnam">Vietnam</button>
+                    <button class="country-tab" data-tab="thailand">Thailand</button>
+                    <button class="country-tab" data-tab="japan">Japan</button>
+                    <button class="country-tab" data-tab="dubai">Dubai</button>
+                    <button class="country-tab" data-tab="maldives">Maldives</button>
+                    <button class="country-tab" data-tab="taiwan">Taiwan</button>
+                    <button class="country-tab" data-tab="china">China</button>
+                    <button class="country-tab" data-tab="turkey">Turkey</button>
+                    <button class="country-tab" data-tab="south-korea">South Korea</button>
+                    <button class="country-tab" data-tab="nepal">Nepal</button>
+                </div>
+            </div>
+
+            <!-- Tab Content -->
+            <div class="country-content">
+
+                <!-- India -->
+                <div class="tab-panel active" id="india">
+                    <div class="tours-grid">
+                        <a href="kashmi.html" class="tour-card">
+                            <img src="assets/img/india/india1.jpeg" alt="Kashmir Golden Triangle">
+                            <div class="tour-info">
+                                <h3>Kashmir – Golden Triangle Tour</h3>
+                                <p class="duration">09 Nights / 10 Days</p>
+                            </div>
+                        </a>
+                        <a href="glodentriangle.html" class="tour-card">
+                            <img src="assets/img/india/India 2.jpeg" alt="Glorious Golden Triangle">
+                            <div class="tour-info">
+                                <h3>Glorious Golden Triangle Tour</h3>
+                                <p class="duration">5 Nights / 6 Days</p>
+                            </div>
+                        </a>
+                        <a href="exotickerala.html" class="tour-card">
+                            <img src="assets/img/india/india 3.jpeg" alt="Exotic Kerala">
+                            <div class="tour-info">
+                                <h3>Exotic Kerala Tour</h3>
+                                <p class="duration">5 Nights / 6 Days</p>
+                            </div>
+                        </a>
+                        <a href="sikkim.html" class="tour-card">
+                            <img src="assets/img/east india/east2.jpg" alt="Sikkim Darjeeling">
+                            <div class="tour-info">
+                                <h3>Sikkim with Darjeeling Tour</h3>
+                                <p class="duration">8 Nights / 9 Days</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Sri Lanka -->
+                <div class="tab-panel" id="srilanka">
+                    <div class="tours-grid">
+                        <a href="srilanka1.html" class="tour-card">
+                            <img src="assets/img/srilanka/srilanka1.jpeg" alt="Best of Sri Lanka">
+                            <div class="tour-info">
+                                <h3>Best of Sri Lanka</h3>
+                                <p class="duration">6 Nights / 7 Days</p>
+                            </div>
+                        </a>
+                        <a href="srilanka2.html" class="tour-card">
+                            <img src="assets/img/srilanka/Sri Lanka2.jpeg" alt="Memorable Sri Lanka">
+                            <div class="tour-info">
+                                <h3>Memorable Sri Lanka Tour</h3>
+                                <p class="duration">5 Nights / 6 Days</p>
+                            </div>
+                        </a>
+                        <a href="srilanka3.html" class="tour-card">
+                            <img src="assets/img/srilanka/srilanka3.jpeg" alt="Enjoyable Sri Lanka">
+                            <div class="tour-info">
+                                <h3>Enjoyable Sri Lanka</h3>
+                                <p class="duration">4 Nights / 5 Days</p>
+                            </div>
+                        </a>
+                        <a href="srilanka4.html" class="tour-card">
+                            <img src="assets/img/srilanka/srilanka4.jpeg" alt="Women's Special Sri Lanka">
+                            <div class="tour-info">
+                                <h3>Women's Special Sri Lanka Tour</h3>
+                                <p class="duration">4 Nights / 5 Days</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Europe -->
+                <div class="tab-panel" id="europe">
+                    <div class="tours-grid">
+                        <a href="europe1.html" class="tour-card">
+                            <img src="assets/img/eruope/eruope1.jpeg" alt="European Wonders">
+                            <div class="tour-info">
+                                <h3>European Wonders</h3>
+                                <p class="duration">12 Nights / 13 Days</p>
+                            </div>
+                        </a>
+                        <a href="europe2.html" class="tour-card">
+                            <img src="assets/img/eruope/eroupe2.jpeg" alt="Premium Western Europe">
+                            <div class="tour-info">
+                                <h3>Premium Western Europe + London</h3>
+                                <p class="duration">10 Nights / 12 Days</p>
+                            </div>
+                        </a>
+                        <a href="europe3.html" class="tour-card">
+                            <img src="assets/img/eruope/eroupe3.jpeg" alt="Swiss Paris Amsterdam">
+                            <div class="tour-info">
+                                <h3>Swiss Paris Amsterdam Brussels</h3>
+                                <p class="duration">10 Nights / 11 Days</p>
+                            </div>
+                        </a>
+                        <a href="europe4.html" class="tour-card">
+                            <img src="assets/img/eruope/erupoe4.jpg" alt="European Highlights">
+                            <div class="tour-info">
+                                <h3>European Highlights</h3>
+                                <p class="duration">10 Nights / 12 Days</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Indonesia -->
+                <div class="tab-panel" id="indonesia">
+                    <div class="tours-grid">
+                        <a href="indo1.html" class="tour-card">
+                            <img src="assets/img/indo/indo1.jpeg" alt="Best of Bali">
+                            <div class="tour-info">
+                                <h3>Best of Bali</h3>
+                                <p class="duration">4 Nights / 5 Days</p>
+                            </div>
+                        </a>
+                        <a href="indo2.html" class="tour-card">
+                            <img src="assets/img/indo/indo2.jpeg" alt="Memorable Bali">
+                            <div class="tour-info">
+                                <h3>Memorable Bali</h3>
+                                <p class="duration">6 Nights / 7 Days</p>
+                            </div>
+                        </a>
+                        <a href="indo3.html" class="tour-card">
+                            <img src="assets/img/indo/indo3.jpeg" alt="Honeymoon Special Bali">
+                            <div class="tour-info">
+                                <h3>Honeymoon Special Bali</h3>
+                                <p class="duration">3 Nights / 4 Days</p>
+                            </div>
+                        </a>
+                        <a href="indo4.html" class="tour-card">
+                            <img src="assets/img/indo/indo4.jpg" alt="Women's Special Bali">
+                            <div class="tour-info">
+                                <h3>Women's Special Bali</h3>
+                                <p class="duration">4 Nights / 5 Days</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Cambodia -->
+                <div class="tab-panel" id="cambodia">
+                    <div class="tours-grid">
+                        <a href="cambo1.html" class="tour-card">
+                            <img src="assets/img/camo/camo1.jpeg" alt="Best of Siem Reap">
+                            <div class="tour-info">
+                                <h3>Best of Siem Reap</h3>
+                                <p class="duration">3 Nights / 4 Days</p>
+                            </div>
+                        </a>
+                        <a href="cambo2.html" class="tour-card">
+                            <img src="assets/img/camo/camo2.jpeg" alt="Phnom Penh & Siem Reap">
+                            <div class="tour-info">
+                                <h3>Phnom Penh & Siem Reap</h3>
+                                <p class="duration">4 Nights / 5 Days</p>
+                            </div>
+                        </a>
+                        <a href="cambo3.html" class="tour-card">
+                            <img src="assets/img/camo/camo3.jpeg" alt="Phnom Penh & Outskirts">
+                            <div class="tour-info">
+                                <h3>Phnom Penh & Outskirts</h3>
+                                <p class="duration">3 Nights / 4 Days</p>
+                            </div>
+                        </a>
+                        <a href="cambo4.html" class="tour-card">
+                            <img src="assets/img/camo/camo 4.jpg" alt="Great Angkor">
+                            <div class="tour-info">
+                                <h3>Great Angkor</h3>
+                                <p class="duration">2 Nights / 3 Days</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Vietnam -->
+                <div class="tab-panel" id="vietnam">
+                    <div class="tours-grid">
+                        <a href="vietnam1.html" class="tour-card">
+                            <img src="assets/img/vietanam/vitenam1.jpeg" alt="Best of Vietnam">
+                            <div class="tour-info">
+                                <h3>Best of Vietnam</h3>
+                                <p class="duration">4 Nights / 5 Days</p>
+                            </div>
+                        </a>
+                        <a href="vietnam2.html" class="tour-card">
+                            <img src="assets/img/vietanam/vitenam2.jpeg" alt="Memorable Vietnam">
+                            <div class="tour-info">
+                                <h3>Memorable Vietnam</h3>
+                                <p class="duration">4 Nights / 5 Days</p>
+                            </div>
+                        </a>
+                        <a href="vietnam3.html" class="tour-card">
+                            <img src="assets/img/vietanam/vitenam3.jpeg" alt="Vietnam Honeymoon">
+                            <div class="tour-info">
+                                <h3>Vietnam Honeymoon Tour</h3>
+                                <p class="duration">3 Nights / 4 Days</p>
+                            </div>
+                        </a>
+                        <a href="vietnam4.html" class="tour-card">
+                            <img src="assets/img/vietanam/vitenam4.jpg" alt="Women's Special Vietnam">
+                            <div class="tour-info">
+                                <h3>Women's Special Vietnam</h3>
+                                <p class="duration">4 Nights / 5 Days</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Thailand -->
+                <div class="tab-panel" id="thailand">
+                    <div class="tours-grid">
+                        <a href="thai1.html" class="tour-card">
+                            <img src="assets/img/thailand/thai1.jpeg" alt="Bangkok & Pattaya">
+                            <div class="tour-info">
+                                <h3>Bangkok & Pattaya</h3>
+                                <p class="duration">4 Nights / 5 Days</p>
+                            </div>
+                        </a>
+                        <a href="thai2.html" class="tour-card">
+                            <img src="assets/img/thailand/thai2.jpeg" alt="Bangkok & Pattaya">
+                            <div class="tour-info">
+                                <h3>Bangkok & Pattaya</h3>
+                                <p class="duration">5 Nights / 6 Days</p>
+                            </div>
+                        </a>
+                        <a href="thai3.html" class="tour-card">
+                            <img src="assets/img/thailand/thai3.jpeg" alt="Phuket & Krabi">
+                            <div class="tour-info">
+                                <h3>Phuket & Krabi</h3>
+                                <p class="duration">7 Nights / 8 Days</p>
+                            </div>
+                        </a>
+                        <a href="thai4.html" class="tour-card">
+                            <img src="assets/img/thailand/thai4.jpg" alt="Women's Special Bangkok">
+                            <div class="tour-info">
+                                <h3>Women's Special Bangkok & Pattaya</h3>
+                                <p class="duration">4 Nights / 5 Days</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Japan -->
+                <div class="tab-panel" id="japan">
+                    <div class="tours-grid">
+                        <a href="japan1.html" class="tour-card">
+                            <img src="assets/img/japan/japan2.jpeg" alt="Best of Japan">
+                            <div class="tour-info">
+                                <h3>Best of Japan</h3>
+                                <p class="duration">4 Nights / 6 Days</p>
+                            </div>
+                        </a>
+                        <a href="japan2.html" class="tour-card">
+                            <img src="assets/img/japan/japan1.jpeg" alt="Marvels Japan">
+                            <div class="tour-info">
+                                <h3>Marvels Japan</h3>
+                                <p class="duration">6 Nights / 7 Days</p>
+                            </div>
+                        </a>
+                        <a href="japan3.html" class="tour-card">
+                            <img src="assets/img/japan/japan3.jpeg" alt="Treasures of Japan">
+                            <div class="tour-info">
+                                <h3>Treasures of Japan</h3>
+                                <p class="duration">4 Nights / 6 Days</p>
+                            </div>
+                        </a>
+                        <a href="japan4.html" class="tour-card">
+                            <img src="assets/img/japan/japan4.jpg" alt="Women's Special Japan">
+                            <div class="tour-info">
+                                <h3>Women's Special Japan</h3>
+                                <p class="duration">4 Nights / 6 Days</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Dubai -->
+                <div class="tab-panel" id="dubai">
+                    <div class="tours-grid">
+                        <a href="dubai1.html" class="tour-card">
+                            <img src="assets/img/dubai/dubai1.jpeg" alt="Best of Dubai">
+                            <div class="tour-info">
+                                <h3>Best of Dubai</h3>
+                                <p class="duration">5 Nights / 6 Days</p>
+                            </div>
+                        </a>
+                        <a href="dubai2.html" class="tour-card">
+                            <img src="assets/img/dubai/dubai2.jpeg" alt="Marvels Dubai">
+                            <div class="tour-info">
+                                <h3>Marvels Dubai</h3>
+                                <p class="duration">4 Nights / 5 Days</p>
+                            </div>
+                        </a>
+                        <a href="dubai3.html" class="tour-card">
+                            <img src="assets/img/dubai/dubai3.jpeg" alt="Treasures of Dubai">
+                            <div class="tour-info">
+                                <h3>Treasures of Dubai</h3>
+                                <p class="duration">6 Nights / 7 Days</p>
+                            </div>
+                        </a>
+                        <a href="dubai4.html" class="tour-card">
+                            <img src="assets/img/dubai/dubai4.jpg" alt="Family Dubai">
+                            <div class="tour-info">
+                                <h3>Family Dubai Tour</h3>
+                                <p class="duration">7 Nights / 8 Days</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Maldives -->
+                <div class="tab-panel" id="maldives">
+                    <div class="tours-grid">
+                        <a href="mal1.html" class="tour-card">
+                            <img src="assets/img/maladives/maldives1.jpeg" alt="Amazing Maldives">
+                            <div class="tour-info">
+                                <h3>Amazing Maldives</h3>
+                                <p class="duration">3 Nights / 4 Days</p>
+                            </div>
+                        </a>
+                        <a href="mal2.html" class="tour-card">
+                            <img src="assets/img/maladives/maldives2.jpeg" alt="Blissful Maldives">
+                            <div class="tour-info">
+                                <h3>Blissful Maldives Tour</h3>
+                                <p class="duration">3 Nights / 4 Days</p>
+                            </div>
+                        </a>
+                        <a href="mal3.html" class="tour-card">
+                            <img src="assets/img/maladives/maldives3.jpeg" alt="Coco Bodhu Hithi">
+                            <div class="tour-info">
+                                <h3>Coco Bodhu Hithi Resort</h3>
+                                <p class="duration">3 Nights / 4 Days</p>
+                            </div>
+                        </a>
+                        <a href="mal4.html" class="tour-card">
+                            <img src="assets/img/maladives/Maldives honeymoon aesthetic wallpaper for mobile 4K.jpeg"
+                                alt="Oblu Select">
+                            <div class="tour-info">
+                                <h3>Oblu Select Sangeli Resort Retreat</h3>
+                                <p class="duration">3 Nights / 4 Days</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Taiwan -->
+                <div class="tab-panel" id="taiwan">
+                    <div class="tours-grid">
+                        <a href="taiwan1.html" class="tour-card">
+                            <img src="assets/img/taiwan/Taiwan.jpeg" alt="Best of Taiwan">
+                            <div class="tour-info">
+                                <h3>Best of Taiwan</h3>
+                                <p class="duration">5 Nights / 6 Days</p>
+                            </div>
+                        </a>
+                        <a href="taiwan2.html" class="tour-card">
+                            <img src="assets/img/taiwan/Taipei 101.jpeg" alt="Discover Taiwan">
+                            <div class="tour-info">
+                                <h3>Discover Taiwan</h3>
+                                <p class="duration">6 Nights / 7 Days</p>
+                            </div>
+                        </a>
+                        <a href="taiwan3.html" class="tour-card">
+                            <img src="assets/img/taiwan/Kaohsiung, Taiwan - 43 Things To Do Guide + Photos 2025 - Taiwanderers.jpeg"
+                                alt="Amazing Taipei">
+                            <div class="tour-info">
+                                <h3>Amazing Taipei</h3>
+                                <p class="duration">3 Nights / 4 Days</p>
+                            </div>
+                        </a>
+                        <a href="taiwan4.html" class="tour-card">
+                            <img src="assets/img/taiwan/Ancient Chinese Mega Bridge.jpeg" alt="Stunning Taipei">
+                            <div class="tour-info">
+                                <h3>Stunning Taipei</h3>
+                                <p class="duration">2 Nights / 3 Days</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- China -->
+                <div class="tab-panel" id="china">
+                    <div class="tours-grid">
+                        <a href="china1.html" class="tour-card">
+                            <img src="assets/img/china/china1.jpeg" alt="Modern China">
+                            <div class="tour-info">
+                                <h3>Modern China With Beijing And Shanghai</h3>
+                                <p class="duration">6 Nights / 7 Days</p>
+                            </div>
+                        </a>
+                        <a href="china2.html" class="tour-card">
+                            <img src="assets/img/china/china2.jpeg" alt="Classic China">
+                            <div class="tour-info">
+                                <h3>Classic China Tour</h3>
+                                <p class="duration">7 Nights / 8 Days</p>
+                            </div>
+                        </a>
+                        <a href="china3.html" class="tour-card">
+                            <img src="assets/img/china/china3.jpeg" alt="Best Yunnan">
+                            <div class="tour-info">
+                                <h3>Best Yunnan Tour</h3>
+                                <p class="duration">9 Nights / 10 Days</p>
+                            </div>
+                        </a>
+                        <a href="china4.html" class="tour-card">
+                            <img src="assets/img/china/china4.jpeg" alt="Beijing Family">
+                            <div class="tour-info">
+                                <h3>Beijing Family Tour</h3>
+                                <p class="duration">4 Nights / 5 Days</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Turkey -->
+                <div class="tab-panel" id="turkey">
+                    <div class="tours-grid">
+                        <a href="turkey1.html" class="tour-card">
+                            <img src="assets/img/truky/turkey1.jpeg" alt="Best of Turkey">
+                            <div class="tour-info">
+                                <h3>Best of Turkey</h3>
+                                <p class="duration">6 Nights / 7 Days</p>
+                            </div>
+                        </a>
+                        <a href="turkey2.html" class="tour-card">
+                            <img src="assets/img/truky/turkey2.jpeg" alt="Classic Turkey">
+                            <div class="tour-info">
+                                <h3>Classic Turkey</h3>
+                                <p class="duration">9 Nights / 10 Days</p>
+                            </div>
+                        </a>
+                        <a href="turkey3.html" class="tour-card">
+                            <img src="assets/img/truky/turkey3.jpeg" alt="Highlights of Istanbul">
+                            <div class="tour-info">
+                                <h3>Highlights of Istanbul</h3>
+                                <p class="duration">4 Nights / 5 Days</p>
+                            </div>
+                        </a>
+                        <a href="turkey4.html" class="tour-card">
+                            <img src="assets/img/truky/turkey4.jpeg" alt="Amazing Turkey">
+                            <div class="tour-info">
+                                <h3>Amazing Turkey</h3>
+                                <p class="duration">9 Nights / 10 Days</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- South Korea -->
+                <div class="tab-panel" id="south-korea">
+                    <div class="tours-grid">
+                        <a href="sk1.html" class="tour-card">
+                            <img src="assets/img/south korea/sk1.jpeg" alt="South Eastern Korea">
+                            <div class="tour-info">
+                                <h3>South Eastern Korea Seoul Muslim Package</h3>
+                                <p class="duration">4 Nights / 5 Days</p>
+                            </div>
+                        </a>
+                        <a href="sk2.html" class="tour-card">
+                            <img src="assets/img/south korea/sk2.jpeg" alt="Sparkling Korea">
+                            <div class="tour-info">
+                                <h3>Sparkling Korea Tour Package</h3>
+                                <p class="duration">4 Nights / 5 Days</p>
+                            </div>
+                        </a>
+                        <a href="sk3.html" class="tour-card">
+                            <img src="assets/img/south korea/sk3.jpeg" alt="Eastern Korea Muslim">
+                            <div class="tour-info">
+                                <h3>Eastern Korea Muslim Package Mt. Seorak</h3>
+                                <p class="duration">4 Nights / 5 Days</p>
+                            </div>
+                        </a>
+                        <a href="sk4.html" class="tour-card">
+                            <img src="assets/img/south korea/sk4.jpeg" alt="Amazing South Korea">
+                            <div class="tour-info">
+                                <h3>Amazing South Korea</h3>
+                                <p class="duration">9 Nights / 10 Days</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Nepal -->
+                <div class="tab-panel" id="nepal">
+                    <div class="tours-grid">
+                        <a href="nepal1.html" class="tour-card">
+                            <img src="assets/img/Nepal/Nepal1.jpeg" alt="Nepal + Muktinath">
+                            <div class="tour-info">
+                                <h3>Nepal + Muktinath Tour</h3>
+                                <p class="duration">6 Nights / 7 Days</p>
+                            </div>
+                        </a>
+                        <a href="nepal2.html" class="tour-card">
+                            <img src="assets/img/Nepal/Nepal2.jpeg" alt="Nepal Tour">
+                            <div class="tour-info">
+                                <h3>Nepal Tour</h3>
+                                <p class="duration">6 Nights / 7 Days</p>
+                            </div>
+                        </a>
+                        <a href="nepal3.html" class="tour-card">
+                            <img src="assets/img/Nepal/Nepal3.jpeg" alt="Holy Muktinath">
+                            <div class="tour-info">
+                                <h3>Holy Muktinath Tour</h3>
+                                <p class="duration">7 Nights / 8 Days</p>
+                            </div>
+                        </a>
+                        <a href="nepal4.html" class="tour-card">
+                            <img src="assets/img/Nepal/Nepal4.jpeg" alt="Shivaratri with Muktinath">
+                            <div class="tour-info">
+                                <h3>Shivaratri Tour with Muktinath</h3>
+                                <p class="duration">7 Nights / 8 Days</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ==================================
+    Wornderful Place For You
+    =================================== -->
+    <section class="pb-5 bg-top-center" id="dra" data-bg-src="assets/img/bg/category_bg_1.png">
+        <div class="container th-container">
+            <div class="section__title__area">
+                <div class="section__sub__title">Wornderful Place For You</div>
+                <div class="section__title">Our Popular Tours</div>
+            </div>
+
+            <div class="swiper th-slider has-shadow categorySlider" id="categorySlider1"
+                data-bg-src="assets/img/bg/category_bg_1.png"
+                data-slider-options='{"spaceBetween": "50","breakpoints":{"0":{"slidesPerView":1},"576":{"slidesPerView":"1"},"768":{"slidesPerView":"2"},"992":{"slidesPerView":"3"},"1200":{"slidesPerView":"3"},"1400":{"slidesPerView":"5"}}}'>
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="category-card single">
+                            <div class="box-img global-img">
+                                <img src="assets/img/wonder/dubai.jpeg" alt="Image">
+                            </div>
+                            <h3 class="box-title"><a href="dubai-outbound.html">Best of Dubai - 5N6D</a></h3>
+                            <a class="line-btn" href="dubai-outbound.html">See more</a>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="category-card single">
+                            <div class="box-img global-img">
+                                <img src="assets/img/wonder/bali.jpeg" alt="Image">
+                            </div>
+                            <h3 class="box-title"><a href="bali-outbound.html">Amazing Bali - 5D4N</a></h3>
+                            <a class="line-btn" href="bali-outbound.html">See more</a>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="category-card single">
+                            <div class="box-img global-img">
+                                <img src="assets/img/wonder/kerala.jpeg" alt="Image">
+                            </div>
+                            <h3 class="box-title"><a href="exotickerala.html">Exotic Kerala - 6D5N</a></h3>
+                            <a class="line-btn" href="exotickerala.html">See more</a>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="category-card single">
+                            <div class="box-img global-img">
+                                <img src="assets/img/wonder/vitenam.jpeg" alt="Image">
+                            </div>
+                            <h3 class="box-title"><a href="vietnam-outbound.html">Vietnam Vibes - 5DN</a></h3>
+                            <a class="line-btn" href="vietnam-outbound.html">See more</a>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="category-card single">
+                            <div class="box-img global-img">
+                                <img src="assets/img/wonder/maldives.jpeg" alt="Image">
+                            </div>
+                            <h3 class="box-title"><a href="destination.html">Magic of Maldives - 5D4N</a></h3>
+                            <a class="line-btn" href="destination.html">See more</a>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="category-card single">
+                            <div class="box-img global-img">
+                                <img src="assets/img/wonder/srilanka.jpeg" alt="Image">
+                            </div>
+                            <h3 class="box-title"><a href="srilankaoutbound.html">Divine Srilanka - 10D9N</a></h3>
+                            <a class="line-btn" href="srilankaoutbound.html">See more</a>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="category-card single">
+                            <div class="box-img global-img">
+                                <img src="assets/img/wonder/kashmir.jpeg" alt="Image">
+                            </div>
+                            <h3 class="box-title"><a href="kashmir.html">Beutiful Kashmir - 7D6N</a></h3>
+                            <a class="line-btn" href="kashmir.html">See more</a>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="slider-pagination"></div>
+            </div>
+        </div>
+    </section>
+
+    <!--==============================
+    Top Destination
+    ==============================-->
+    <section class="base-template">
+        <div class="wrapper base-template__wrapper">
+            <div class="section__title__area">
+                <div class="section__sub__title">Top Destination</div>
+                <div class="section__title">Popular Destination</div>
+            </div>
+
+            <div class="base-template__content">
+                <div class="slider-section">
+                    <div class="swiper background-swiper">
+                        <div class="swiper-wrapper">
+
+                            <!-- Background Slide 1 -->
+
+                            <div class="swiper-slide slide" data-title="Golden Silence"
+                                data-desc="Embrace the harmony of colors and calm.">
+                                <img src="https://bato-web-agency.github.io/bato-shared/img/double-slider/img1.jpg"
+                                    alt="Golden Silence" width="768" height="1024" loading="lazy">
+                            </div>
+
+                            <!-- Background Slide 2 -->
+
+                            <div class="swiper-slide slide" data-title="Europe" data-desc="15 Listings">
+                                <img src="https://bato-web-agency.github.io/bato-shared/img/double-slider/img2.jpg"
+                                    alt="Europe" width="768" height="1152" loading="lazy">
+                            </div>
+
+                            <!-- Background Slide 3 -->
+
+                            <div class="swiper-slide slide" data-title="India" data-desc="22 Listings">
+                                <img src="https://bato-web-agency.github.io/bato-shared/img/double-slider/img3.jpg"
+                                    alt="India" width="768" height="929" loading="lazy">
+                            </div>
+
+                            <!-- Background Slide 4 -->
+
+                            <div class="swiper-slide slide" data-title="Sunlit Heights"
+                                data-desc="Breathe freely in the warmth of freedom.">
+                                <img src="https://bato-web-agency.github.io/bato-shared/img/double-slider/img4.jpg"
+                                    alt="Sunlit Heights" width="768" height="1152" loading="lazy">
+                            </div>
+
+                            <!-- Background Slide 5 -->
+
+                            <div class="swiper-slide slide" data-title="Awakening Peaks"
+                                data-desc="Feel life return to every slope.">
+                                <img src="https://bato-web-agency.github.io/bato-shared/img/double-slider/img5.jpg"
+                                    alt="Awakening Peaks" width="768" height="768" loading="lazy">
+                            </div>
+
+                            <!-- Background Slide 6 -->
+
+                            <div class="swiper-slide slide" data-title="Language of Details"
+                                data-desc="Watch the mountains greet the night in radiant skies.">
+                                <img src="https://bato-web-agency.github.io/bato-shared/img/double-slider/img6.jpg"
+                                    alt="Language of Details" width="768" height="1152" loading="lazy">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="centered-swiper swiper">
+                        <div class="swiper-wrapper">
+
+                            <!-- Centered Slide 1 -->
+
+                            <div class="swiper-slide centered-swiper__slide">
+                                <img src="https://bato-web-agency.github.io/bato-shared/img/double-slider/img1.jpg"
+                                    alt="Golden Silence" width="768" height="1024" loading="lazy">
+                            </div>
+
+                            <!-- Centered Slide 2 -->
+
+                            <div class="swiper-slide centered-swiper__slide">
+                                <img src="https://bato-web-agency.github.io/bato-shared/img/double-slider/img2.jpg"
+                                    alt="Frozen Majesty" width="768" height="1152" loading="lazy">
+                            </div>
+
+                            <!-- Centered Slide 3 -->
+
+                            <div class="swiper-slide centered-swiper__slide">
+                                <img src="https://bato-web-agency.github.io/bato-shared/img/double-slider/img3.jpg"
+                                    alt="India" width="768" height="929" loading="lazy">
+                            </div>
+
+                            <!-- Centered Slide 4 -->
+
+                            <div class="swiper-slide centered-swiper__slide">
+                                <img src="https://bato-web-agency.github.io/bato-shared/img/double-slider/img4.jpg"
+                                    alt="Sunlit Heights" width="768" height="1152" loading="lazy">
+                            </div>
+
+                            <!-- Centered Slide 5 -->
+
+                            <div class="swiper-slide centered-swiper__slide">
+                                <img src="https://bato-web-agency.github.io/bato-shared/img/double-slider/img5.jpg"
+                                    alt="Awakening Peaks" width="768" height="768" loading="lazy">
+                            </div>
+
+                            <!-- Centered Slide 6 -->
+
+                            <div class="swiper-slide centered-swiper__slide">
+                                <img src="https://bato-web-agency.github.io/bato-shared/img/double-slider/img6.jpg"
+                                    alt="Language of Details" width="768" height="1152" loading="lazy">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Sliders Buttons -->
+
+                    <button class="slider-section__prev-button">
+                        Prev
+                    </button>
+
+                    <button class="slider-section__next-button">
+                        Next
+                    </button>
+
+                    <!-- Sliders Data -->
+
+                    <h2 class="slider-section__title" id="slideTitle">
+                        India
+                    </h2>
+
+                    <p class="slider-section__text" id="slideText">
+                        22 Listings
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const buttonPrev = document.querySelector(".slider-section__prev-button");
+            const buttonNext = document.querySelector(".slider-section__next-button");
+
+            const slides = document.querySelectorAll(".background-swiper .swiper-slide");
+
+            // Content Preparation
+
+            const titles = [],
+                texts = [];
+
+            slides.forEach((slide) => {
+                const title = slide.dataset.title.trim() || "";
+                const desc = slide.dataset.desc.trim() || "";
+
+                titles.push(title);
+                texts.push(desc);
+            });
+
+            // Buttons State Update
+
+            const updateState = (swiper) => {
+                const { isBeginning, isEnd } = swiper;
+
+                isBeginning
+                    ? buttonPrev.classList.add("disabled")
+                    : buttonPrev.classList.remove("disabled");
+                isEnd
+                    ? buttonNext.classList.add("disabled")
+                    : buttonNext.classList.remove("disabled");
+            };
+
+            // Background Slider Initialization
+
+            const backgroundSwiper = new Swiper(".background-swiper", {
+                slidesPerView: "auto",
+                spaceBetween: 45,
+                centeredSlides: true,
+                initialSlide: 2,
+                speed: 800,
+                navigation: {
+                    prevEl: buttonPrev,
+                    nextEl: buttonNext
+                },
+                on: {
+                    init: function () {
+                        updateState(this);
+                    },
+                    slideChange: function () {
+                        updateState(this);
+                    }
+                }
+            });
+
+            // Centered Slider Initialization
+
+            const centerSwiper = new Swiper(".centered-swiper", {
+                slidesPerView: 1,
+                loop: false,
+                initialSlide: 2,
+                speed: 800
+            });
+
+            // Sliders Interactions
+
+            const title = document.getElementById("slideTitle");
+            const text = document.getElementById("slideText");
+
+            backgroundSwiper.on("slideChange", function () {
+                const index = this.realIndex;
+
+                centerSwiper.slideToLoop(index, 600);
+
+                title.classList.add("hidden-out");
+                text.classList.add("hidden-out");
+
+                setTimeout(() => {
+                    title.classList.remove("hidden-out");
+                    text.classList.remove("hidden-out");
+
+                    title.textContent = titles[index];
+                    text.textContent = texts[index];
+
+                    title.classList.add("hidden-in");
+                    text.classList.add("hidden-in");
+
+                    setTimeout(() => {
+                        title.classList.remove("hidden-in");
+                        text.classList.remove("hidden-in");
+                    }, 300);
+                }, 300);
+            });
+        });
+
+    </script>
+
+
+    <!--==============================
+    About Area  
+    ==============================-->
+    <div class="home__about" id="">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-6">
+                    <div class="home_about_imgs">
+                        <div class="home_about_imgs_img1">
+                            <img src="assets/img/normal/about_1_1.jpg" alt="About">
+                        </div>
+                        <div class="home_about_imgs_img2">
+                            <img src="assets/img/normal/about_1_2.jpg" alt="About">
+                            <img src="assets/img/normal/about_1_3.jpg" alt="About">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-6">
+                    <div class="section__title__area">
+                        <span class="section__sub__title">Let’s Go Together</span>
+                        <h2 class="section__title"
+                            style="text-align: left; margin-top: 10px; font-weight: 600; font-size: 50px; line-height: 1.1;">
+                            Plan Your
+                            Trip With us</h2>
+
+                        <p class="">
+                            At AIP Holidays, we believe that every journey is a story waiting to be told. Whether
+                            you're a seasoned globetrotter or embarking on your first adventure, our mission is to
+                            turn your travel dreams into unforgettable realities.
+                        </p>
+                    </div>
+                    <div class="px-4">
+                        <div class="">
+                            <h5 class="">500+ Awesome Tour</h5>
+                            <p class="">We are thrilled to announce that we have successfully
+                                completed 500+ tours, and it's all thanks to YOU — our amazing and adventurous
+                                community!</p>
+                        </div>
+                        <div class="">
+                            <h5 class="">100+ Destinations</h5>
+                            <p class="">We are thrilled to share a momentous achievement with you
+                                — we have successfully navigated and explored 100+ destinations together!</p>
+                        </div>
+                        <div class="mt-35">
+                            <a href="about-us.html" class="th-btn style3 th-icon">Learn More</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- <div class="shape-mockup shape1 d-none d-xl-block" data-top="12%" data-left="-16%">
+                <img src="assets/img/shape/shape_1.png" alt="shape">
+            </div>
+            <div class="shape-mockup shape2 d-none d-xl-block" data-top="20%" data-left="-16%">
+                <img src="assets/img/shape/shape_2.png" alt="shape">
+            </div>
+            <div class="shape-mockup shape3 d-none d-xl-block" data-top="14%" data-left="-10%">
+                <img src="assets/img/shape/shape_3.png" alt="shape">
+            </div>
+
+            <div class="shape-mockup about-shape movingX d-none d-xxl-block" data-bottom="0%" data-right="-11%">
+                <img src="assets/img/normal/about-slide-img.png" alt="shape">
+            </div>
+            <div class="shape-mockup about-rating d-none d-xxl-block" data-bottom="50%" data-right="-20%">
+                <i class="fa-sharp fa-solid fa-star"></i><span>4.9k</span>
+            </div>
+            <div class="shape-mockup about-emoji d-none d-xxl-block" data-bottom="25%" data-right="5%"><img
+                    src="assets/img/icon/emoji.png" alt="">
+            </div> -->
+        </div>
+
+    </div>
+
+
+    <!--==============================
+    Best place Tour
+    ==============================-->
+    <section class="best__place_tour" id="service-sec">
+        <div class="container">
+            <div class="section__title__area">
+                <div class="section__sub__title">Best Place For You</div>
+                <div class="section__title">Most Popular Tour</div>
+            </div>
+            <div class="slider-area tour-slider">
+                <div class="swiper th-slider has-shadow slider-drag-wrap "
+                    data-slider-options='{"breakpoints":{"320":{"slidesPerView":1},"576":{"slidesPerView":"1.4"},"768":{"slidesPerView":"2.4"},"992":{"slidesPerView":"2"}, "1024":{"slidesPerView":"3"},"1200":{"slidesPerView":"3"},"1300":{"slidesPerView":"4"}}}'>
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="tour-box">
+                                <div class="tour-box_img global-img">
+                                    <img src="assets/img/wonder/bali.jpeg" alt="image">
+                                </div>
+                                <div class="tour-content">
+                                    <h3 class="box-title"><a href="bali-outbound.html">Amazing Bali</a></h3>
+                                    <div class="tour-rating">
+                                        <div class="star-rating" role="img" aria-label="Rated 5.00 out of 5"><span
+                                                style="width:100%">Rated
+                                                <strong class="rating">5.00</strong> out of 5 based on <span
+                                                    class="rating">4.8</span>(4.8
+                                                Rating)</span></div>
+                                        <a href="bali-outbound.html" class="woocommerce-review-link"></a>
+                                    </div>
+                                    <span><i class="fa-light fa-clock"></i> 7 Days</span>
+
+                                    <div class="tour-action mt-2">
+                                        <a href="http://wa.me/60142541907">
+                                            <img src="assets/img/whatsapp.png" alt="WhatsApp"
+                                                style="width: 26px; height: 26px; margin-right: 2px;">
+                                        </a>
+                                        <a href="contact.html" class="th-btn style4 th-icon">Book Now</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="tour-box">
+                                <div class="tour-box_img global-img">
+                                    <img src="assets/img/wonder/dubai.jpeg" alt="image">
+                                </div>
+                                <div class="tour-content">
+                                    <h3 class="box-title"><a href="dubai-outbound.html">Dubai Tour package</a></h3>
+                                    <div class="tour-rating">
+                                        <div class="star-rating" role="img" aria-label="Rated 5.00 out of 5"><span
+                                                style="width:100%">Rated
+                                                <strong class="rating">5.00</strong> out of 5 based on <span
+                                                    class="rating">4.8</span>(4.8
+                                                Rating)</span></div>
+                                        <a href="dubai-outbound.html" class="woocommerce-review-link"></a>
+                                    </div>
+                                    <span><i class="fa-light fa-clock"></i> 7 Days</span>
+
+                                    <div class="tour-action mt-2">
+                                        <a href="http://wa.me/60142541907">
+                                            <img src="assets/img/whatsapp.png" alt="WhatsApp"
+                                                style="width: 26px; height: 26px; margin-right: 2px;">
+                                        </a>
+                                        <a href="contact.html" class="th-btn style4 th-icon">Book Now</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="tour-box">
+                                <div class="tour-box_img global-img">
+                                    <img src="assets/img/wonder/kashmir.jpeg" alt="image">
+                                </div>
+                                <div class="tour-content">
+                                    <h3 class="box-title"><a href="outbound-india.html">India Tour Package</a></h3>
+                                    <div class="tour-rating">
+                                        <div class="star-rating" role="img" aria-label="Rated 5.00 out of 5"><span
+                                                style="width:100%">Rated
+                                                <strong class="rating">5.00</strong> out of 5 based on <span
+                                                    class="rating">4.8</span>(4.8
+                                                Rating)</span></div>
+                                        <a href="outbound-india.html" class="woocommerce-review-link"></a>
+                                    </div>
+                                    <span><i class="fa-light fa-clock"></i> 7 Days</span>
+
+                                    <div class="tour-action mt-2">
+                                        <a href="http://wa.me/60142541907">
+                                            <img src="assets/img/whatsapp.png" alt="WhatsApp"
+                                                style="width: 26px; height: 26px; margin-right: 2px;">
+                                        </a>
+                                        <a href="contact.html" class="th-btn style4 th-icon">Book Now</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="tour-box">
+                                <div class="tour-box_img global-img">
+                                    <img src="assets/img/wonder/maldives.jpeg" alt="image">
+                                </div>
+                                <div class="tour-content">
+                                    <h3 class="box-title"><a href="tour-details.html">Maldives Tour Packages</a></h3>
+                                    <div class="tour-rating">
+                                        <div class="star-rating" role="img" aria-label="Rated 5.00 out of 5"><span
+                                                style="width:100%">Rated
+                                                <strong class="rating">5.00</strong> out of 5 based on <span
+                                                    class="rating">4.8</span>(4.8
+                                                Rating)</span></div>
+                                        <a href="tour-details.html" class="woocommerce-review-link"></a>
+                                    </div>
+                                    <span><i class="fa-light fa-clock"></i> 7 Days</span>
+
+                                    <div class="tour-action mt-2">
+                                        <a href="http://wa.me/60142541907">
+                                            <img src="assets/img/whatsapp.png" alt="WhatsApp"
+                                                style="width: 26px; height: 26px; margin-right: 2px;">
+                                        </a>
+                                        <a href="contact.html" class="th-btn style4 th-icon">Book Now</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="tour-box">
+                                <div class="tour-box_img global-img">
+                                    <img src="assets/img/wonder/srilanka.jpeg
+                                    " alt="image">
+                                </div>
+                                <div class="tour-content">
+                                    <h3 class="box-title"><a href="srilankaoutbound.html">Srilanka Tour Package</a></h3>
+                                    <div class="tour-rating">
+                                        <div class="star-rating" role="img" aria-label="Rated 5.00 out of 5"><span
+                                                style="width:100%">Rated
+                                                <strong class="rating">5.00</strong> out of 5 based on </span></div>
+                                        <a href="srilankaoutbound.html" class="woocommerce-review-link"></a>
+                                    </div>
+                                    <span><i class="fa-light fa-clock"></i> 7 Days</span>
+
+                                    <div class="tour-action mt-2">
+                                        <a href="http://wa.me/60142541907">
+                                            <img src="assets/img/whatsapp.png" alt="WhatsApp"
+                                                style="width: 26px; height: 26px; margin-right: 2px;">
+                                        </a>
+                                        <a href="contact.html" class="th-btn style4 th-icon">Book Now</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="tour-box">
+                                <div class="tour-box_img global-img">
+                                    <img src="assets/img/wonder/vitenam.jpeg" alt="image">
+                                </div>
+                                <div class="tour-content">
+                                    <h3 class="box-title"><a href="vietnam-outbound.html">Vitenam Tour package</a></h3>
+                                    <div class="tour-rating">
+                                        <div class="star-rating" role="img" aria-label="Rated 5.00 out of 5"><span
+                                                style="width:100%">Rated
+                                                <strong class="rating">5.00</strong> out of 5 based on <span
+                                                    class="rating">4.8</span>(4.8
+                                                Rating)</span></div>
+                                        <a href="vietnam-outbound.html" class="woocommerce-review-link"></a>
+                                    </div>
+                                    <span><i class="fa-light fa-clock"></i> 7 Days</span>
+
+                                    <div class="tour-action mt-2">
+                                        <a href="http://wa.me/60142541907">
+                                            <img src="assets/img/whatsapp.png" alt="WhatsApp"
+                                                style="width: 26px; height: 26px; margin-right: 2px;">
+                                        </a>
+                                        <a href="contact.html" class="th-btn style4 th-icon">Book Now</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!--==============================
+    Gallery Area  
+    ==============================-->
+    <div class="gallery-area">
+        <div class="container th-container ">
+            <div class="section__title__area">
+                <div class="section__sub__title">Make Your Tour More Pleasure</div>
+                <div class="section__title">Recent Gallery</div>
+            </div>
+            <div class="row gy-10 gx-10 justify-content-center align-items-center">
+                <div class="col-md-6 col-lg-2">
+                    <div class="gallery-card">
+                        <div class="box-img global-img">
+                            <a href="assets/img/gallery/gallery_1_1.jpg" class="popup-image">
+                                <div class="icon-btn"><i class="fal fa-magnifying-glass-plus"></i></div>
+                                <img src="assets/img/gallery/gallery_1_1.jpg" alt="gallery image">
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-md-6 col-lg-2">
+                    <div class="gallery-card">
+                        <div class="box-img global-img">
+                            <a href="assets/img/gallery/gallery_1_2.jpg" class="popup-image">
+                                <div class="icon-btn"><i class="fal fa-magnifying-glass-plus"></i></div>
+                                <img src="assets/img/gallery/gallery_1_2.jpg" alt="gallery image">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="gallery-card">
+                        <div class="box-img global-img">
+                            <a href="assets/img/gallery/gallery_1_3.jpg" class="popup-image">
+                                <div class="icon-btn"><i class="fal fa-magnifying-glass-plus"></i></div>
+                                <img src="assets/img/gallery/gallery_1_3.jpg" alt="gallery image">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-2">
+                    <div class="gallery-card">
+                        <div class="box-img global-img">
+                            <a href="assets/img/gallery/gallery_1_4.jpg" class="popup-image">
+                                <div class="icon-btn"><i class="fal fa-magnifying-glass-plus"></i></div>
+                                <img src="assets/img/gallery/gallery_1_4.jpg" alt="gallery image">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-2">
+                    <div class="gallery-card">
+                        <div class="box-img global-img">
+                            <a href="assets/img/gallery/gallery_1_5.jpg" class="popup-image">
+                                <div class="icon-btn"><i class="fal fa-magnifying-glass-plus"></i></div>
+                                <img src="assets/img/gallery/gallery_1_5.jpg" alt="gallery image">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="gallery-card">
+                        <div class="box-img global-img">
+                            <a href="assets/img/gallery/gallery_1_6.jpg" class="popup-image">
+                                <div class="icon-btn"><i class="fal fa-magnifying-glass-plus"></i></div>
+                                <img src="assets/img/gallery/gallery_1_6.jpg" alt="gallery image">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-2">
+                    <div class="gallery-card">
+                        <div class="box-img global-img">
+                            <a href="assets/img/gallery/gallery_1_7.jpg" class="popup-image">
+                                <div class="icon-btn"><i class="fal fa-magnifying-glass-plus"></i></div>
+                                <img src="assets/img/gallery/gallery_1_7.jpg" alt="gallery image">
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="shape-mockup  d-none d-xl-block" data-top="-25%" data-left="0%">
+                <img src="assets/img/shape/line.png" alt="shape">
+            </div>
+            <div class="shape-mockup movingX d-none d-xl-block" data-top="30%" data-left="-3%">
+                <img class="gmovingX" src="assets/img/shape/shape_4.png" alt="shape">
+            </div>
+        </div>
+    </div>
+
+    <!--==============================
+    Team Area  
+    ==============================-->
+    <section class="bg-smoke team__area overflow-hidden" data-bg-src="assets/img/bg/team_bg_1.png">
+        <div class="container z-index-common">
+            <div class="section__title__area">
+                <div class="section__sub__title">Meet with Collaborators</div>
+                <div class="section__title">Our Collaborators</div>
+            </div>
+            <div class="slider-area">
+                <div class="swiper th-slider teamSlider1 has-shadow" id="teamSlider1"
+                    data-slider-options='{"breakpoints":{"0":{"slidesPerView":1},"576":{"slidesPerView":"1"},"768":{"slidesPerView":"2"},"992":{"slidesPerView":"3"},"1200":{"slidesPerView":"4"}}}'>
+                    <div class="swiper-wrapper">
+                        <!-- Single Item -->
+                        <div class="swiper-slide">
+                            <div class="th-team team-box">
+                                <div class="team-img">
+                                    <img src="assets/img/team/team_1_1.jpg" alt="Team">
+                                </div>
+                                <div class="team-content">
+                                    <div class="media-body">
+                                        <h3 class="box-title"><a href="tour-guider-details.html">Revathy</a></h3>
+                                        <span class="team-desig">TV Personality</span>
+                                        <div class="th-social">
+                                            <a target="_blank" href="https://facebook.com/"><i
+                                                    class="fab fa-facebook-f"></i></a>
+                                            <a target="_blank" href="https://www.tiktok.com/"><i
+                                                    class="fab fa-tiktok"></i></a>
+                                            <a target="_blank" href="https://www.instagram.com/revathy.mariappan/"><i
+                                                    class="fab fa-instagram"></i></a>
+                                            <a target="_blank" href="https://www.youtube.com/"><i
+                                                    class="fa-brands fa-youtube"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Single Item -->
+                        <div class="swiper-slide">
+                            <div class="th-team team-box">
+                                <div class="team-img">
+                                    <img src="assets/img/team/team_1_2.jpg" alt="Team">
+                                </div>
+                                <div class="team-content">
+                                    <div class="media-body">
+                                        <h3 class="box-title"><a href="tour-guider-details.html">Dharshamini</a></h3>
+                                        <span class="team-desig">Content Creator</span>
+                                        <div class="th-social">
+                                            <a target="_blank" href="https://facebook.com/"><i
+                                                    class="fab fa-facebook-f"></i></a>
+                                            <a target="_blank" href="https://www.tiktok.com/"><i
+                                                    class="fab fa-tiktok"></i></a>
+                                            <a target="_blank" href="https://www.instagram.com/dharshamini_kesavan/"><i
+                                                    class="fab fa-instagram"></i></a>
+                                            <a target="_blank" href="https://www.youtube.com/"><i
+                                                    class="fa-brands fa-youtube"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Single Item -->
+                        <div class="swiper-slide">
+                            <div class="th-team team-box">
+                                <div class="team-img">
+                                    <img src="assets/img/team/team_1_3.jpg" alt="Team">
+                                </div>
+                                <div class="team-content">
+                                    <div class="media-body">
+                                        <h3 class="box-title"><a href="tour-guider-details.html">Asaraf Ali</a></h3>
+                                        <span class="team-desig">Video Creator</span>
+                                        <div class="th-social">
+                                            <a target="_blank" href="https://facebook.com/"><i
+                                                    class="fab fa-facebook-f"></i></a>
+                                            <a target="_blank" href="https://www.tiktok.com/"><i
+                                                    class="fab fa-tiktok"></i></a>
+                                            <a target="_blank" href="https://www.instagram.com/asrafvlogger/"><i
+                                                    class="fab fa-instagram"></i></a>
+                                            <a target="_blank" href="https://www.youtube.com/"><i
+                                                    class="fa-brands fa-youtube"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Single Item -->
+                        <div class="swiper-slide">
+                            <div class="th-team team-box">
+                                <div class="team-img">
+                                    <img src="assets/img/team/team_1_4.jpg" alt="Team">
+                                </div>
+                                <div class="team-content">
+                                    <div class="media-body">
+                                        <h3 class="box-title"><a href="tour-guider-details.html">Aishwarya</a></h3>
+                                        <span class="team-desig">Digital Creator</span>
+                                        <div class="th-social">
+                                            <a target="_blank" href="https://facebook.com/"><i
+                                                    class="fab fa-facebook-f"></i></a>
+                                            <a target="_blank" href="https://www.tiktok.com/"><i
+                                                    class="fab fa-tiktok"></i></a>
+                                            <a target="_blank" href="https://www.instagram.com/aishwaryaofficial01/"><i
+                                                    class="fab fa-instagram"></i></a>
+                                            <a target="_blank" href="https://www.youtube.com/"><i
+                                                    class="fa-brands fa-youtube"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Single Item -->
+                        <div class="swiper-slide">
+                            <div class="th-team team-box">
+                                <div class="team-img">
+                                    <img src="assets/img/team/team_1_1.jpg" alt="Team">
+                                </div>
+                                <div class="team-content">
+                                    <div class="media-body">
+                                        <h3 class="box-title"><a href="tour-guider-details.html">Revathy</a></h3>
+                                        <span class="team-desig">TV Personality</span>
+                                        <div class="th-social">
+                                            <a target="_blank" href="https://facebook.com/"><i
+                                                    class="fab fa-facebook-f"></i></a>
+                                            <a target="_blank" href="https://www.tiktok.com/"><i
+                                                    class="fab fa-tiktok"></i></a>
+                                            <a target="_blank" href="https://www.instagram.com/revathy.mariappan/"><i
+                                                    class="fab fa-instagram"></i></a>
+                                            <a target="_blank" href="https://www.youtube.com/"><i
+                                                    class="fa-brands fa-youtube"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Single Item -->
+                        <div class="swiper-slide">
+                            <div class="th-team team-box">
+                                <div class="team-img">
+                                    <img src="assets/img/team/team_1_2.jpg" alt="Team">
+                                </div>
+                                <div class="team-content">
+                                    <div class="media-body">
+                                        <h3 class="box-title"><a href="tour-guider-details.html">Dharshamini</a></h3>
+                                        <span class="team-desig">Content Creator</span>
+                                        <div class="th-social">
+                                            <a target="_blank" href="https://facebook.com/"><i
+                                                    class="fab fa-facebook-f"></i></a>
+                                            <a target="_blank" href="https://www.tiktok.com/"><i
+                                                    class="fab fa-tiktok"></i></a>
+                                            <a target="_blank" href="https://www.instagram.com/dharshamini_kesavan/"><i
+                                                    class="fab fa-instagram"></i></a>
+                                            <a target="_blank" href="https://www.youtube.com/"><i
+                                                    class="fa-brands fa-youtube"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Single Item -->
+                        <div class="swiper-slide">
+                            <div class="th-team team-box">
+                                <div class="team-img">
+                                    <img src="assets/img/team/team_1_3.jpg" alt="Team">
+                                </div>
+                                <div class="team-content">
+                                    <div class="media-body">
+                                        <h3 class="box-title"><a href="tour-guider-details.html">Asaraf Ali</a></h3>
+                                        <span class="team-desig">Video creator</span>
+                                        <div class="th-social">
+                                            <a target="_blank" href="https://facebook.com/"><i
+                                                    class="fab fa-facebook-f"></i></a>
+                                            <a target="_blank" href="https://www.tiktok.com/"><i
+                                                    class="fab fa-tiktok"></i></a>
+                                            <a target="_blank" href="https://www.instagram.com/asrafvlogger/"><i
+                                                    class="fab fa-instagram"></i></a>
+                                            <a target="_blank" href="https://www.youtube.com/"><i
+                                                    class="fa-brands fa-youtube"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Single Item -->
+                        <div class="swiper-slide">
+                            <div class="th-team team-box">
+                                <div class="team-img">
+                                    <img src="assets/img/team/team_1_4.jpg" alt="Team">
+                                </div>
+                                <div class="team-content">
+                                    <div class="media-body">
+                                        <h3 class="box-title"><a href="tour-guider-details.html">Aishwarya</a></h3>
+                                        <span class="team-desig">Digital Creator</span>
+                                        <div class="th-social">
+                                            <a target="_blank" href="https://facebook.com/"><i
+                                                    class="fab fa-facebook-f"></i></a>
+                                            <a target="_blank" href="https://www.tiktok.com/"><i
+                                                    class="fab fa-tiktok"></i></a>
+                                            <a target="_blank" href="https://www.instagram.com/aishwaryaofficial01/"><i
+                                                    class="fab fa-instagram"></i></a>
+                                            <a target="_blank" href="https://www.youtube.com/"><i
+                                                    class="fa-brands fa-youtube"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="slider-pagination"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--==============================
+    Testimonial Area  
+    ==============================-->
+    <section class="testi-area overflow-hidden" id="testi-sec">
+        <div class="container-fluid p-0">
+            <div class="section__title__area">
+                <div class="section__sub__title">Testimonial</div>
+                <div class="section__title">What Client Say About us</div>
+            </div>
+            <div class="slider-area">
+                <div class="swiper th-slider testiSlider1 has-shadow" id="testiSlider1"
+                    data-slider-options='{"breakpoints":{"0":{"slidesPerView":1},"767":{"slidesPerView":"2","centeredSlides":"true"},"992":{"slidesPerView":"2","centeredSlides":"true"},"1200":{"slidesPerView":"2","centeredSlides":"true"},"1400":{"slidesPerView":"3","centeredSlides":"true"}}}'>
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="testi-card">
+                                <div class="testi-card_wrapper">
+                                    <div class="testi-card_profile">
+                                        <div class="testi-card_avater">
+                                            <img src="assets/img/default-avatar-2020-66.jpg" alt="testimonial">
+                                        </div>
+                                        <div class="media-body">
+                                            <h3 class="box-title">Sashee
+                                            </h3>
+                                            <span class="testi-card_desig">Traveller</span>
+                                        </div>
+                                    </div>
+                                    <div class="testi-card_review">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                    </div>
+                                </div>
+
+                                <p class="testi-card_text">I recently booked a honeymoon trip to Kerala through AIP
+                                    Travel, and it was truly magical. From the stunning backwaters of Alleppey to the
+                                    lush hill stations of Munnar, every moment was perfect.
+
+                                    AIP Travel handled all the details, from luxurious accommodations to personalized
+                                    experiences. /p>
+                                <div class="testi-card-quote">
+                                    <img src="assets/img/icon/testi-quote.svg" alt="img">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="testi-card">
+                                <div class="testi-card_wrapper">
+                                    <div class="testi-card_profile">
+                                        <div class="testi-card_avater">
+                                            <img src="assets/img/testimonial/testi_1_2.jpg" alt="testimonial">
+                                        </div>
+                                        <div class="media-body">
+                                            <h3 class="box-title">Andrew Simon</h3>
+                                            <span class="testi-card_desig">Traveller</span>
+                                        </div>
+                                    </div>
+                                    <div class="testi-card_review">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                    </div>
+                                </div>
+
+                                <p class="testi-card_text">“A home that perfectly blends sustainability with luxury
+                                    until I discovered Ecoland Residence. From the moment I stepped into this community,
+                                    I knew it was where I wanted to live. The commitment to eco-friendly living”</p>
+                                <div class="testi-card-quote">
+                                    <img src="assets/img/icon/testi-quote.svg" alt="img">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="testi-card">
+                                <div class="testi-card_wrapper">
+                                    <div class="testi-card_profile">
+                                        <div class="testi-card_avater">
+                                            <img src="assets/img/testimonial/testi_1_1.jpg" alt="testimonial">
+                                        </div>
+                                        <div class="media-body">
+                                            <h3 class="box-title">Alex Jordan</h3>
+                                            <span class="testi-card_desig">Traveller</span>
+                                        </div>
+                                    </div>
+                                    <div class="testi-card_review">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                    </div>
+                                </div>
+
+                                <p class="testi-card_text">“A home that perfectly blends sustainability with luxury
+                                    until I discovered Ecoland Residence. From the moment I stepped into this community,
+                                    I knew it was where I wanted to live. The commitment to eco-friendly living”</p>
+                                <div class="testi-card-quote">
+                                    <img src="assets/img/icon/testi-quote.svg" alt="img">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="testi-card">
+                                <div class="testi-card_wrapper">
+                                    <div class="testi-card_profile">
+                                        <div class="testi-card_avater">
+                                            <img src="assets/img/caption.jpg" alt="testimonial">
+                                        </div>
+                                        <div class="media-body">
+                                            <h3 class="box-title">jay1234</h3>
+                                            <span class="testi-card_desig">Traveller</span>
+                                        </div>
+                                    </div>
+                                    <div class="testi-card_review">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                    </div>
+                                </div>
+
+                                <p class="testi-card_text">“I recently embarked on a tour organized by All India
+                                    Packages, and it was an exceptional experience from start to finish. The itinerary
+                                    was thoughtfully crafted,...”</p>
+                                <div class="testi-card-quote">
+                                    <img src="assets/img/icon/testi-quote.svg" alt="img">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="testi-card">
+                                <div class="testi-card_wrapper">
+                                    <div class="testi-card_profile">
+                                        <div class="testi-card_avater">
+                                            <img src="assets/img/default-avatar-2020-59.jpg" alt="testimonial">
+                                        </div>
+                                        <div class="media-body">
+                                            <h3 class="box-title">Ganga</h3>
+                                            <span class="testi-card_desig">Traveller</span>
+                                        </div>
+                                    </div>
+                                    <div class="testi-card_review">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                    </div>
+                                </div>
+
+                                <p class="testi-card_text">“Thanking Deepak from AIP for making the arranging our recent
+                                    trip to North India. Deepak from AIP was quite helpful in resolving the issues we
+                                    encountered during the trip. Our problems began on the first day at the hotel in
+                                    Delhi and persisted until our last day back in Delhi....”
+                                </p>
+                                <div class="testi-card-quote">
+                                    <img src="assets/img/icon/testi-quote.svg" alt="img">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="testi-card">
+                                <div class="testi-card_wrapper">
+                                    <div class="testi-card_profile">
+                                        <div class="testi-card_avater">
+                                            <img src="assets/img/heman-n.jpg" alt="testimonial">
+                                        </div>
+                                        <div class="media-body">
+                                            <h3 class="box-title">heman n</h3>
+                                            <span class="testi-card_desig">Traveller</span>
+                                        </div>
+                                    </div>
+                                    <div class="testi-card_review">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                    </div>
+                                </div>
+
+                                <p class="testi-card_text">“We had a 6D5N tour to Kerala. When we landed at Cochin
+                                    Airport, our driver, Eltinis, welcomed us. We checked into the first hotel, Hotel
+                                    Presidency Cochin, which was conveniently close to the airport, making it easy to
+                                    reach after our 4-hour-plus flight...”</p>
+                                <div class="testi-card-quote">
+                                    <img src="assets/img/icon/testi-quote.svg" alt="img">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="testi-card">
+                                <div class="testi-card_wrapper">
+                                    <div class="testi-card_profile">
+                                        <div class="testi-card_avater">
+                                            <img src="assets/img/default-avatar-2020-9.jpg" alt="testimonial">
+                                        </div>
+                                        <div class="media-body">
+                                            <h3 class="box-title">Amitayu G</h3>
+                                            <span class="testi-card_desig">Traveller</span>
+                                        </div>
+                                    </div>
+                                    <div class="testi-card_review">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                    </div>
+                                </div>
+
+                                <p class="testi-card_text">“We as family visited South India Temples through All India
+                                    Packages. The trip was very well planned with good stay and arrangements. We are
+                                    really thankful to Saba for 24*7 support. We had a great time at each temple, and we
+                                    enjoyed a lot through all the trips... ”</p>
+                                <div class="testi-card-quote">
+                                    <img src="assets/img/icon/testi-quote.svg" alt="img">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="testi-card">
+                                <div class="testi-card_wrapper">
+                                    <div class="testi-card_profile">
+                                        <div class="testi-card_avater">
+                                            <img src="assets/img/default-avatar-2020-8.jpg" alt="testimonial">
+                                        </div>
+                                        <div class="media-body">
+                                            <h3 class="box-title">
+                                                Mona
+                                            </h3>
+                                            <span class="testi-card_desig">Traveller</span>
+                                        </div>
+                                    </div>
+                                    <div class="testi-card_review">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                    </div>
+                                </div>
+
+                                <p class="testi-card_text">“My recent AIP India Tour Package for South India was an
+                                    exceptional journey that showcased the region's diversity and cultural richness. The
+                                    well-planned itinerary immersed us in Kerala's backwaters, Tamil Nadu's historic
+                                    temples, and Shirdi's vibrant culture...”</p>
+                                <div class="testi-card-quote">
+                                    <img src="assets/img/icon/testi-quote.svg" alt="img">
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="slider-pagination"></div>
+                </div>
+            </div>
+        </div>
+        <div class="shape-mockup d-none d-xl-block" data-bottom="-2%" data-right="0%">
+            <img src="assets/img/shape/line2.png" alt="shape">
+        </div>
+        <div class="shape-mockup movingX d-none d-xl-block" data-top="30%" data-left="5%">
+            <img src="assets/img/shape/shape_7.png" alt="shape">
+        </div>
+    </section>
+
+    <!--==============================
+    Brand Area  
+    ==============================-->
+    <footer class="footer-wrapper bg-title footer-layout2">
+        <div class="widget-area">
+            <div class="container">
+
+                <div class="row justify-content-between">
+                    <div class="col-md-6 col-xl-3">
+                        <div class="widget footer-widget">
+                            <div class="th-widget-about">
+                                <div class="about-logo">
+                                    <a href="/"><img src="assets/img/logo-white.svg" alt="Tourm"></a>
+                                </div>
+                                <p class="about-text">At AIP Holidays, we believe that every journey is a story waiting
+                                    to be told.</p>
+                                <div class="th-social">
+                                    <a href="https://www.facebook.com/aipholidays"><i class="fab fa-facebook-f"></i></a>
+                                    <a href="https://instagram.com/aipholidays"><i class="fab fa-instagram"></i></a>
+                                    <a href="https://www.tiktok.com/@aipholidays"><i class="fab fa-tiktok"></i></a>
+                                    <a href="https://www.youtube.com/@aipholidays"><i class="fab fa-youtube"></i></a>
+                                    <a
+                                        href="https://api.whatsapp.com/send/?phone=60142541907&text&type=phone_number&app_absent=0"><i
+                                            class="fab fa-whatsapp"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-xl-auto">
+                        <div class="widget widget_nav_menu footer-widget">
+                            <h3 class="widget_title">Quick Links</h3>
+                            <div class="menu-all-pages-container">
+                                <ul class="menu">
+                                    <li><a href="index.html">Home</a></li>
+                                    <li><a href="about-us.html">About us</a></li>
+                                    <li><a href="service.html">Our Service</a></li>
+                                    <li><a href="contact.html">Terms of Service</a></li>
+                                    <li><a href="contact.html">Tour Booking Now</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-xl-auto">
+                        <div class="widget footer-widget">
+                            <h3 class="widget_title">Get In Touch</h3>
+                            <div class="th-widget-contact">
+                                <div class="info-box_text">
+                                    <div class="icon">
+                                        <img src="assets/img/icon/phone.svg" alt="img">
+                                    </div>
+                                    <div class="details">
+                                        <p><a href="tel:+01234567890" class="info-box_link">+60 18-955 1767</a></p>
+                                        <p><a href="tel:+09876543210" class="info-box_link">+60 14-254 1907</a></p>
+                                    </div>
+                                </div>
+                                <div class="info-box_text">
+                                    <div class="icon">
+                                        <img src="assets/img/icon/envelope.svg" alt="img">
+                                    </div>
+                                    <div class="details">
+                                        <p style="margin-top: 10px;"><a href="mailto:aipholidays.my@gmail.com"
+                                                class="info-box_link"
+                                                style="margin-top: 20px;">aipholidays.my@gmail.com</a></p>
+                                    </div>
+                                </div>
+                                <div class="info-box_text">
+                                    <div class="icon"><img src="assets/img/icon/location-dot.svg" alt="img"></div>
+                                    <div class="details">
+                                        <p>118-B, first floor, Jalan Tun Sambanthan, Brickfields, 50470 Kuala Lumpur</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-xl-auto">
+                        <div class="widget footer-widget">
+                            <h3 class="widget_title">Instagram Post</h3>
+                            <div class="sidebar-gallery">
+                                <div class="gallery-thumb">
+                                    <img src="assets/img/widget/gallery_1_1.jpg" alt="Gallery Image">
+                                    <a target="_blank" href="https://www.instagram.com/aipholidays/"
+                                        class="gallery-btn"><i class="fab fa-instagram"></i></a>
+                                </div>
+                                <div class="gallery-thumb">
+                                    <img src="assets/img/widget/gallery_1_2.jpg" alt="Gallery Image">
+                                    <a target="_blank" href="https://www.instagram.com/aipholidays/"
+                                        class="gallery-btn"><i class="fab fa-instagram"></i></a>
+                                </div>
+                                <div class="gallery-thumb">
+                                    <img src="assets/img/widget/gallery_1_3.jpg" alt="Gallery Image">
+                                    <a target="_blank" href="https://www.instagram.com/aipholidays/"
+                                        class="gallery-btn"><i class="fab fa-instagram"></i></a>
+                                </div>
+                                <div class="gallery-thumb">
+                                    <img src="assets/img/widget/gallery_1_4.jpg" alt="Gallery Image">
+                                    <a target="_blank" href="https://www.instagram.com/aipholidays/"
+                                        class="gallery-btn"><i class="fab fa-instagram"></i></a>
+                                </div>
+                                <div class="gallery-thumb">
+                                    <img src="assets/img/widget/gallery_1_5.jpg" alt="Gallery Image">
+                                    <a target="_blank" href="https://www.instagram.com/aipholidays/"
+                                        class="gallery-btn"><i class="fab fa-instagram"></i></a>
+                                </div>
+                                <div class="gallery-thumb">
+                                    <img src="assets/img/widget/gallery_1_6.jpg" alt="Gallery Image">
+                                    <a target="_blank" href="https://www.instagram.com/aipholidays/"
+                                        class="gallery-btn"><i class="fab fa-instagram"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright-wrap">
+            <div class="container">
+                <div class="row justify-content-between align-items-center">
+                    <div class="col-md-6">
+                        <p class="copyright-text">Copyright 2025 <a href="index.html">AIP Holidays Sdn. Bhd.</a> All
+                            Rights Reserved.</p>
+                    </div>
+                    <div class="col-md-6 text-end d-none d-md-block">
+                        <div class="footer-card">
+                            <span class="title">We Accept</span>
+                            <img src="assets/img/shape/cards.png" alt="">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="shape-mockup movingX d-none d-xxl-block" data-top="24%" data-left="5%">
+            <img src="assets/img/shape/shape_8.png" alt="shape">
+        </div>
+    </footer>
+
+    <!--********************************
+			Code End  Here 
+	******************************** -->
+
+    <!-- Scroll To Top -->
+    <div class="scroll-top">
+        <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"
+                style="transition: stroke-dashoffset 10ms linear 0s; stroke-dasharray: 307.919, 307.919; stroke-dashoffset: 307.919;">
+            </path>
+        </svg>
+    </div>
+    <!--==============================
+    modal Area  
+    ==============================-->
+    <div id="login-form" class="popup-login-register mfp-hide">
+        <ul class="nav" id="pills-tab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-menu" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home"
+                    type="button" role="tab" aria-controls="pills-home" aria-selected="false">Login</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-menu active" id="pills-profile-tab" data-bs-toggle="pill"
+                    data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile"
+                    aria-selected="true">Register</button>
+            </li>
+        </ul>
+        <div class="tab-content" id="pills-tabContent">
+            <div class="tab-pane fade" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+                <h3 class="box-title mb-30">Sign in to your account</h3>
+                <div class="th-login-form">
+                    <form action="mail.php" method="POST" class="login-form ajax-contact">
+                        <div class="row">
+                            <div class="form-group col-12">
+                                <label>Username or email</label>
+                                <input type="text" class="form-control" name="email" id="email" required="required">
+                            </div>
+                            <div class="form-group col-12">
+                                <label>Password</label>
+                                <input type="password" class="form-control" name="pasword" id="pasword"
+                                    required="required">
+                            </div>
+
+                            <div class="form-btn mb-20 col-12">
+                                <button class="th-btn btn-fw th-radius2 ">Send Message</button>
+                            </div>
+                        </div>
+                        <div id="forgot_url">
+                            <a href="my-account.html">Forgot password?</a>
+                        </div>
+                        <p class="form-messages mb-0 mt-3"></p>
+                    </form>
+                </div>
+            </div>
+            <div class="tab-pane fade active show" id="pills-profile" role="tabpanel"
+                aria-labelledby="pills-profile-tab">
+                <h3 class="th-form-title mb-30">Sign in to your account</h3>
+                <form action="mail.php" method="POST" class="login-form ajax-contact">
+                    <div class="row">
+                        <div class="form-group col-12">
+                            <label>Username*</label>
+                            <input type="text" class="form-control" name="usename" id="usename" required="required">
+                        </div>
+                        <div class="form-group col-12">
+                            <label>First name*</label>
+                            <input type="text" class="form-control" name="firstname" id="firstname" required="required">
+                        </div>
+                        <div class="form-group col-12">
+                            <label>Last name*</label>
+                            <input type="text" class="form-control" name="lastname" id="lastname" required="required">
+                        </div>
+                        <div class="form-group col-12">
+                            <label for="new_email">Your email*</label>
+                            <input type="text" class="form-control" name="new_email" id="new_email" required="required">
+                        </div>
+                        <div class="form-group col-12">
+                            <label for="new_email_confirm">Confirm email*</label>
+                            <input type="text" class="form-control" name="new_email_confirm" id="new_email_confirm"
+                                required="required">
+                        </div>
+                        <div class="statement">
+                            <span class="register-notes">A password will be emailed to you.</span>
+                        </div>
+
+                        <div class="form-btn mt-20 col-12">
+                            <button class="th-btn btn-fw th-radius2 ">Sign up</button>
+                        </div>
+                    </div>
+                    <p class="form-messages mb-0 mt-3"></p>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!--==============================
+    All Js File
+============================== -->
+    <!-- Jquery -->
+    <!-- Jquery -->
+    <script src="assets/js/vendor/jquery-3.6.0.min.js"></script>
+    <!-- Swiper Js -->
+    <script src="assets/js/swiper-bundle.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="assets/js/bootstrap.min.js"></script>
+    <!-- Magnific Popup -->
+    <script src="assets/js/jquery.magnific-popup.min.js"></script>
+    <!-- Counter Up -->
+    <script src="assets/js/jquery.counterup.min.js"></script>
+    <!-- Range Slider -->
+    <script src="assets/js/jquery-ui.min.js"></script>
+    <!-- imagesloaded -->
+    <script src="assets/js/imagesloaded.pkgd.min.js"></script>
+    <!-- isotope -->
+    <script src="assets/js/isotope.pkgd.min.js"></script>
+    <!-- gsap -->
+    <script src="assets/js/gsap.min.js"></script>
+
+    <!-- circle-progress -->
+    <script src="assets/js/circle-progress.js"></script>
+
+    <script src="assets/js/matter.min.js"></script>
+    <script src="assets/js/matterjs-custom.js"></script>
+
+
+    <!-- nice select -->
+    <script src="assets/js/nice-select.min.js"></script>
+
+    <!-- Main Js File -->
+    <script src="assets/js/main.js"></script>
+
+    <!-- custimzied js-->
+    <script src="assets/js/custmize.js"></script>
+
+    <script>
+        // const tabs = document.querySelectorAll(".tab");
+        // const contents = document.querySelectorAll(".tab-content");
+
+        // tabs.forEach(tab => {
+        //     tab.addEventListener("click", () => {
+        //         // Remove active from all tabs
+        //         tabs.forEach(t => t.classList.remove("active"));
+        //         // Add active to clicked tab
+        //         tab.classList.add("active");
+
+        //         // Hide all contents
+        //         contents.forEach(c => c.classList.remove("active"));
+        //         // Show clicked tab's content
+        //         document.getElementById(tab.dataset.tab).classList.add("active");
+        //     });
+
+
+        // });
+        document.addEventListener('DOMContentLoaded', () => {
+            const tabs = document.querySelectorAll('.country-tab');
+            const panels = document.querySelectorAll('.tab-panel');
+
+            tabs.forEach(tab => {
+                tab.addEventListener('click', () => {
+                    // Remove active from all tabs & panels
+                    tabs.forEach(t => t.classList.remove('active'));
+                    panels.forEach(p => p.classList.remove('active'));
+
+                    // Activate clicked tab and corresponding panel
+                    tab.classList.add('active');
+                    const tabId = tab.getAttribute('data-tab');
+                    document.getElementById(tabId).classList.add('active');
+                });
+            });
+        });
+        // Slide tabs into view on load
+        window.addEventListener("DOMContentLoaded", () => {
+            tabs.forEach((tab, index) => {
+                setTimeout(() => {
+                    tab.classList.add("show");
+                }, index * 100); // delay each tab for a staggered effect
+            });
+        });
+
+
+        // /custimized for 480px
+
+        function startSlider() {
+            if (window.innerWidth <= 480) {
+                let cards = document.querySelectorAll("#card-container > div");
+                let index = 0;
+
+                // show first card
+                cards[index].classList.add("active");
+
+                setInterval(() => {
+                    // remove active from current
+                    cards[index].classList.remove("active");
+
+                    // move to next
+                    index = (index + 1) % cards.length;
+
+                    // add active to new
+                    cards[index].classList.add("active");
+                }, 5000); // change every 3 sec
+            }
+        }
+
+        window.addEventListener("load", startSlider);
+
+    </script>
+</body>
+
+</html>

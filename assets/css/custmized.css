@@ -1,0 +1,232 @@
+@use "sass:math";
+
+/*------------------- 1.2. Function -------------------*/
+/*------------------- 1.3. Variable-------------------*/
+:root {
+  --theme-color: #3B5A9B;
+  --primary-color: #3B5A9B;
+  --title-color: #113D48;
+  --body-color: #6E7070;
+  --smoke-color: #EEF0F6;
+  --smoke-color2: #F3F4F6;
+  --black-color: #000000;
+  --black-color2: #0D0D0C;
+  --gray-color: #E1E4E5;
+  --white-color: #ffffff;
+  --light-color: #E1E4E5;
+  --yellow-color: #FFB539;
+  --success-color: #28a745;
+  --error-color: #dc3545;
+  --th-border-color: #E9EDF5;
+  --title-font: "Manrope", sans-serif;
+  --body-font: "Inter", sans-serif;
+  --style-font: "Montez", cursive;
+  --icon-font: "Font Awesome 6 Pro";
+  --main-container: 1320px;
+  --container-gutters: 24px;
+  --section-space: 120px;
+  --section-space-mobile: 80px;
+  --section-title-space: 60px;
+  --ripple-ani-duration: 2s;
+  --translate: 0px;
+  --transDur: 1px;
+}
+
+
+
+
+
+.india{
+    font-size:20px;
+}
+
+  
+
+#card-container {
+  display: flex;
+  flex-wrap: wrap;   /* allows wrapping */
+  gap: 40px;         /* space between cards */
+  justify-content: flex-start;
+}
+
+#card-container > div {
+  width: 300px;      /* fix card size */
+}
+
+
+
+.tab-content {
+  display: none;  /* hide all by default */
+  font-size: 20px;
+}
+
+.tab-content.active {
+  display:flex; /* only active one shows */
+}
+
+#tab2,#tab3,#tab4,#tab5{
+    margin-top: 0px;
+    margin-left: 0;
+    
+}
+
+.addon1{
+  margin-top: -10px;
+  margin-left: -60px;
+}
+
+.addon2{
+  margin-top: -10px;
+  
+}
+.addon3{
+  margin-top: -10px;
+  margin-left: 0px;
+}
+
+.addon4{
+  margin-top: -10px;
+  
+}
+.addon6{
+  margin-top: -10px;
+  margin-left: 5px;
+}
+
+.addon7{
+  margin-top: -10px;
+  
+}
+
+
+
+ #card-container button{
+  margin-bottom: 20px;
+ }
+
+
+@media screen and (max-width: 767px) {
+    #card-container {
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    #card-container > div {
+        flex: 0 0 100%;
+        scroll-snap-align: start;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+}
+
+@media screen and (max-width: 489px) {
+    #card-container {
+        display: flex;
+        flex-direction: column;
+        overflow-x: hidden; /* Ensures no horizontal scroll if stacked */
+        width: 480px;
+        height: 500px;
+
+    }
+    .india{
+      font-size: 10px;
+      margin-left: -20px;
+    }
+.col-xxl-4{
+  margin-top: 100px;
+}
+    #card-container > div {
+        flex: 1 1 120%;
+        max-width: 120%;
+        margin-bottom: 40px; /* Add spacing between cards */
+        margin-left: 20px;
+    }
+}
+
+
+.tab-pane {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+@media (max-width: 1366px){
+  #oe button{
+    font-size: 17px;
+    gap: 10px;
+  }
+}
+@media (max-width: 400px){
+  #oe button{
+    font-size: 8px;
+ gap: px;
+    margin-left: px;
+   
+  }
+  .india{
+    margin-right: -5px;
+  }
+  .customize{
+    height: 530px;
+  }
+  .kkqq{
+    margin-right: -20px;
+  }
+  .card1{
+    margin-left: 65px;
+    gap: 15px;
+    height: 400px;
+    margin-right: 40px
+    ;
+  }
+
+  #oe{
+    margin-left: 35px;
+  }
+  #card-container{
+    margin-left: 20px;
+  }
+  .text-center{
+    margin-left: -40px;
+  }
+
+}
+@media screen and (max-width: 400px){
+  #overview{
+    height: 800px;
+  }
+  #itinerary{
+    height: 1000px;
+  }
+  .mobile-logo{
+    width: 280px; 
+    margin-left: -10px;
+  }
+  .jj{
+    margin-left: 15px;
+  }
+  .th-mobile-menu ul{
+    margin-left: 10px;
+  }
+} 
+
+
+@media screen and (max-width: 375px){
+  #overview{
+    height: 800px;
+  }
+  #itinerary{
+    height: 1000px;
+  }
+  .mobile-logo{
+    width: 280px; 
+    margin-left: -10px;
+  }
+  .jj{
+    margin-left: 15px;
+  }
+    .th-mobile-menu ul{
+    margin-left: 10px;
+  }
+} 
