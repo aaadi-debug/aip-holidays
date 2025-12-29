@@ -39754,6 +39754,56 @@ Tour Card
   gap: 20px;
 }
 
+
+/* ---------- india tours ----------------- */
+/* Tabs */
+.tour-tabs__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
+  gap: 12px;
+  /* margin: 24px 0 32px; */
+  margin-bottom: 30px;
+  padding: 0 16px;
+}
+
+.tour-tabs__tab-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: 600;
+  background: #ededed;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.tour-tabs__tab-button:hover {
+  background: #e0e0e0;
+}
+
+.tour-tabs__tab-button.active {
+  background: var(--theme-color);
+  /* or your brand color */
+  color: white;
+}
+
+/* Tab Content */
+.tour-tab__tab-content {
+  display: none;
+}
+
+.tour-tab__tab-content.active {
+  display: block;
+}
+
+/* Make sure your existing .tour-grid is grid-based */
+/* .tour-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 24px;
+} */
+
 @media (max-width: 480px) {
   .tour-grid__header {
     flex-direction: column;
@@ -40169,6 +40219,7 @@ Tour Card
   gap: 6px;
   margin-bottom: 20px;
 }
+
 .main__iti__price__price p {
   padding: 0 !important;
   margin: 0 !important;
@@ -40430,7 +40481,160 @@ Tour Card
 }
 
 
+/* =============================================
+FAQ Area
+============================================ */
+.faq-container {
+  max-width: 900px;
+  margin: 60px auto;
+  padding: 0 20px;
+}
 
+.faq-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.faq-header h1 {
+  font-size: 2.8rem;
+  color: var(--theme-color);
+  margin-bottom: 12px;
+}
+
+.faq-header p {
+  font-size: 1.2rem;
+  color: var(--gray);
+}
+
+.faq-search {
+  max-width: 600px;
+  margin: 0 auto 40px;
+  position: relative;
+}
+
+.faq-search input {
+  width: 100%;
+  padding: 16px 20px 16px 50px;
+  border: 2px solid var(--theme-color);
+  border-radius: 50px;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+}
+
+.faq-search input:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(211, 47, 47, 0.15);
+}
+
+.faq-search .search-icon {
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--theme-color);
+  font-size: 1.3rem;
+}
+
+.faq-item {
+  margin-bottom: 16px;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.faq-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.faq-question {
+  padding: 20px 28px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  transition: background 0.3s ease;
+}
+
+.faq-question h3 {
+  font-size: 1.1rem;
+  margin: 0;
+  flex: 1;
+  padding-right: 20px;
+}
+
+.faq-question i {
+  color: var(--primary);
+  font-size: 1.4rem;
+  transition: transform 0.3s ease;
+}
+
+.faq-item.active .faq-question {
+  background: #ededed;
+}
+
+.faq-item.active .faq-question i {
+  transform: rotate(180deg);
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 28px;
+  background: #f9f9f9;
+  transition: max-height 0.4s ease, padding 0.4s ease;
+}
+
+.faq-item.active .faq-answer {
+  max-height: 500px;
+  /* Adjust as needed */
+  padding: 24px 28px;
+}
+
+.faq-answer p {
+  margin: 0;
+  color: #444;
+}
+
+.faq-categories {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 40px;
+  justify-content: center;
+}
+
+.category-btn {
+  padding: 10px 20px;
+  /* border: 2px solid var(--theme-color); */
+  border: none;
+  outline: none;
+  border-radius: 50px;
+  background: #ededed;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.category-btn.active,
+.category-btn:hover {
+  background: var(--theme-color);
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .faq-header h1 {
+    font-size: 2.2rem;
+  }
+
+  .faq-question h3 {
+    font-size: 1rem;
+  }
+}
 
 /* =============================================
 .preloader
