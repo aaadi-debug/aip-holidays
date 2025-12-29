@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>honeymoon-packages</title>
+    <title>Honeymoon Tours</title>
     <meta name="author" content="Tourm">
     <meta name="description" content="Tourm - Travel & Tour Booking Agency HTML Template ">
     <meta name="keywords" content="Tourm - Travel & Tour Booking Agency HTML Template ">
@@ -313,168 +313,214 @@
     <!--==============================
     Product Area
     ==============================-->
-    <section class="space">
+    <div class="commom__section">
         <div class="container">
-            <div class="row">
 
-                <div class="col-xxl-8 col-lg-7">
-                    <div class="title-area text-center">
-                        <h2 class="sec-title">Search by Honeymoon</h2>
-                    </div>
-
-                    <div class="customize">
-
-
-
-                        <!-- south india -->
-
-                        <div class="tab-content active" id="tab1">
-                            <div class="tab-content-block">
-                                <div id="card-container">
-                                    <div id="card1" class="active">
-                                        <img src="assets/img/kerala/kerala2.jpg" alt="India">
-                                        <h3>Romantic Kerala Honeymoon Tour <br> 5N / 6D</h3>
-                                        <button onclick="window.location.href='romatic.html'">View
-                                            Details</button>
-                                    </div>
-                                    <div id="card2">
-                                        <img src="assets/img/maladives/maldives2.jpeg" alt="Srilanka">
-                                        <h3>Blissful Maldives Tour <br> 3N / 4D</h3>
-                                        <button onclick="window.location.href='mal2.html'">View Details</button>
-                                    </div>
-
-
-
-                                    <div id="card3">
-                                        <img src="assets/img/northindia/northkas (1).jpg" alt="Europe">
-                                        <h3> KASHMIR TOUR <br> 6N / 7D</h3>
-                                        <button onclick="window.location.href='Kashmir.html'">View Details</button>
-                                    </div>
-                                    <div id="card4">
-                                        <img src="assets/img/indo/indo3.jpeg" alt="Bali">
-                                        <h3>Honeymoon Special Bali <br> 3N / 4D</h3>
-                                        <button onclick="window.location.href='indo3.html'">View Details</button>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-
-                    </div>
-
+            <div class="tour-grid__header">
+                <div class="section__title__area">
+                    <div class="section__sub__title">Honeymoon Tours</div>
                 </div>
-                <div class="col-xxl-4 col-lg-5">
-                    <aside class="sidebar-area">
-                        <div class="widget widget_categories  ">
-                            <h3 class="widget_title">Categories</h3>
-                            <ul>
-                                <li>
-                                    <a href="blog.html"><img src="assets/img/theme-img/map.svg" alt="">City Tour</a>
-                                    <span>(8)</span>
-                                </li>
-                                <li>
-                                    <a href="blog.html"><img src="assets/img/theme-img/map.svg" alt="">Beach Tours</a>
-                                    <span>(6)</span>
-                                </li>
-                                <li>
-                                    <a href="blog.html"><img src="assets/img/theme-img/map.svg" alt="">Wildlife
-                                        Tours</a>
-                                    <span>(2)</span>
-                                </li>
-                                <li>
-                                    <a href="blog.html"><img src="assets/img/theme-img/map.svg" alt="">News & Tips</a>
-                                    <span>(7)</span>
-                                </li>
-                                <li>
-                                    <a href="blog.html"><img src="assets/img/theme-img/map.svg" alt="">Adventure
-                                        Tours</a>
-                                    <span>(9)</span>
-                                </li>
-                                <li>
-                                    <a href="blog.html"><img src="assets/img/theme-img/map.svg" alt="">Mountain
-                                        Tours</a>
-                                    <span>(10)</span>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="widget  ">
-                            <h3 class="widget_title">Recent Posts</h3>
-                            <div class="recent-post-wrap">
-                                <div class="recent-post">
-                                    <div class="media-img">
-                                        <a href="blog-details.html"><img src="assets/img/blog/recent-post-1-1.jpg"
-                                                alt="Blog Image"></a>
-                                    </div>
-                                    <div class="media-body">
-                                        <h4 class="post-title"><a class="text-inherit"
-                                                href="blog-details.html">Exploring The
-                                                Green Spaces Of the island
-                                                maldives</a></h4>
-                                        <div class="recent-post-meta">
-                                            <a href="blog.html"><i class="fa-regular fa-calendar"></i>22/6/ 2025</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="recent-post">
-                                    <div class="media-img">
-                                        <a href="blog-details.html"><img src="assets/img/blog/recent-post-1-2.jpg"
-                                                alt="Blog Image"></a>
-                                    </div>
-                                    <div class="media-body">
-                                        <h4 class="post-title"><a class="text-inherit" href="blog-details.html">Harmony
-                                                With Nature Of Belgium Tour and travle</a></h4>
-                                        <div class="recent-post-meta">
-                                            <a href="blog.html"><i class="fa-regular fa-calendar"></i>25/6/ 2025</a>
-                                        </div>
+                <!-- Search Bar -->
+                <div class="search-container">
+                    <div class="search-input-wrapper">
+                        <input type="text" class="search-input" id="tourSearch"
+                            placeholder="Search tours by name">
+                        <i class="fa fa-search search-icon"></i>
+                        <button class="clear-btn" id="clearSearch">
+                            <i class="fa fa-times"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
 
-                                    </div>
+
+            <!-- Results Grid -->
+            <div class="tour-grid" id="tourGrid">
+                <!-- Card 1 -->
+                <div class="tour-card-wrapper">
+                    <div class="main-tour-card">
+                        <img src="assets/img/malasiya/malai1.jpeg" alt="Best of Malaysia Tour">
+                        <div>
+                            <div class="main-tour-card-title">Best of Malaysia Tour</div>
+                            <div class="main-tour-card__price-ratings">
+                                <div class="main-tour-card__price">
+                                    <p>Starts from <span>₹11,299</span></p>
+                                    <p>per person on twin sharing</p>
                                 </div>
-                                <div class="recent-post">
-                                    <div class="media-img">
-                                        <a href="blog-details.html"><img src="assets/img/blog/recent-post-1-3.jpg"
-                                                alt="Blog Image"></a>
+                                <div class="main-tour-card__ratings">
+                                    <div>
+                                        <!-- You can add star rating here later -->
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
                                     </div>
-                                    <div class="media-body">
-                                        <h4 class="post-title"><a class="text-inherit"
-                                                href="blog-details.html">Exploring The
-                                                Green Spaces Of Realar
-                                                Residence</a></h4>
-                                        <div class="recent-post-meta">
-                                            <a href="blog.html"><i class="fa-regular fa-calendar"></i>27/6/ 2025</a>
-                                        </div>
-                                    </div>
+                                    <p>4.8 (120)</p>
                                 </div>
                             </div>
+                            <a href="../../inbound-tours/malaysia/best-of-malaysia.html">View Tour Details</a>
                         </div>
-                        <div class="widget widget_tag_cloud  ">
-                            <h3 class="widget_title">Popular Tags</h3>
-                            <div class="tagcloud">
-                                <a href="blog.html">Tour</a>
-                                <a href="blog.html">Adventure</a>
-                                <a href="blog.html">Rent</a>
-                                <a href="blog.html">Innovate</a>
-                                <a href="blog.html">Hotel</a>
-                                <a href="blog.html">Modern</a>
-                                <a href="blog.html">Luxury</a>
-                                <a href="blog.html">Travel</a>
-                            </div>
-                        </div>
-                    </aside>
+                    </div>
                 </div>
 
+                <!-- Card 2 -->
+                <div class="tour-card-wrapper">
+                    <div class="main-tour-card">
+                        <img src="assets/img/malasiya/malai1.jpeg" alt="Best of Malaysia Tour">
+                        <div>
+                            <div class="main-tour-card-title">Dims of Malaysia Tour</div>
+                            <div class="main-tour-card__price-ratings">
+                                <div class="main-tour-card__price">
+                                    <p>Starts from <span>₹11,299</span></p>
+                                    <p>per person on twin sharing</p>
+                                </div>
+                                <div class="main-tour-card__ratings">
+                                    <div>
+                                        <!-- You can add star rating here later -->
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                    </div>
+                                    <p>4.8 (120)</p>
+                                </div>
+                            </div>
+                            <a href="#">View Tour Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Add more cards as needed -->
+                <div class="tour-card-wrapper">
+                    <div class="main-tour-card">
+                        <img src="assets/img/malasiya/malai1.jpeg" alt="Best of Malaysia Tour">
+                        <div>
+                            <div class="main-tour-card-title">Lights of Malaysia Tour</div>
+                            <div class="main-tour-card__price-ratings">
+                                <div class="main-tour-card__price">
+                                    <p>Starts from <span>₹11,299</span></p>
+                                    <p>per person on twin sharing</p>
+                                </div>
+                                <div class="main-tour-card__ratings">
+                                    <div>
+                                        <!-- You can add star rating here later -->
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                    </div>
+                                    <p>4.8 (120)</p>
+                                </div>
+                            </div>
+                            <a href="#">View Tour Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tour-card-wrapper">
+                    <div class="main-tour-card">
+                        <img src="assets/img/malasiya/malai1.jpeg" alt="Best of Malaysia Tour">
+                        <div>
+                            <div class="main-tour-card-title">Best of Malaysia Tour</div>
+                            <div class="main-tour-card__price-ratings">
+                                <div class="main-tour-card__price">
+                                    <p>Starts from <span>₹11,299</span></p>
+                                    <p>per person on twin sharing</p>
+                                </div>
+                                <div class="main-tour-card__ratings">
+                                    <div>
+                                        <!-- You can add star rating here later -->
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                    </div>
+                                    <p>4.8 (120)</p>
+                                </div>
+                            </div>
+                            <a href="#">View Tour Details</a>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="shape-mockup shape1 d-none d-xxl-block" data-bottom="7%" data-right="-8%">
-                <img src="assets/img/shape/shape_1.png" alt="shape">
-            </div>
-            <div class="shape-mockup shape2 d-none d-xl-block" data-bottom="1%" data-right="-7%">
-                <img src="assets/img/shape/shape_2.png" alt="shape">
-            </div>
-            <div class="shape-mockup shape3 d-none d-xxl-block" data-bottom="-2%" data-right="-12%">
-                <img src="assets/img/shape/shape_3.png" alt="shape">
+
+            <!-- No Results Message -->
+            <div class="no-results" id="noResults" style="display: none;">
+                <i class="fa fa-search"></i>
+                <p>No tours found matching your search. Try different keywords!</p>
             </div>
         </div>
+    </div>
 
-    </section>
+    <!-- // Search functionality -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const searchInput = document.getElementById('tourSearch');
+            const clearBtn = document.getElementById('clearSearch');
+            const tourCards = document.querySelectorAll('.tour-card-wrapper');
+            const noResults = document.getElementById('noResults');
+            const tourGrid = document.getElementById('tourGrid');
+
+            let timeout;
+
+            function performSearch() {
+                clearTimeout(timeout);
+                timeout = setTimeout(function () {
+                    const searchTerm = searchInput.value.trim().toLowerCase();
+                    let visibleCount = 0;
+
+                    tourCards.forEach(card => {
+                        // Find the title element inside this card
+                        const titleElement = card.querySelector('.main-tour-card-title');
+                        const titleText = titleElement ? titleElement.textContent.trim().toLowerCase() : '';
+
+                        const matches = searchTerm === '' || titleText.includes(searchTerm);
+
+                        if (matches) {
+                            card.style.display = '';         // Reset to default (grid item)
+                            visibleCount++;
+                        } else {
+                            card.style.display = 'none';     // Hide completely
+                        }
+                    });
+
+                    // Show/hide no results
+                    if (searchTerm !== '' && visibleCount === 0) {
+                        noResults.style.display = 'block';
+                        tourGrid.style.display = 'none';
+                    } else {
+                        noResults.style.display = 'none';
+                        tourGrid.style.display = 'grid';
+                    }
+
+                    // Show/hide clear button
+                    clearBtn.style.display = searchTerm !== '' ? 'block' : 'none';
+                }, 300);
+            }
+
+            searchInput.addEventListener('input', performSearch);
+
+            clearBtn.addEventListener('click', function () {
+                searchInput.value = '';
+                clearBtn.style.display = 'none';
+                performSearch();
+                searchInput.focus();
+            });
+
+            // Optional: clear on Enter if no results
+            searchInput.addEventListener('keypress', function (e) {
+                if (e.key === 'Enter' && noResults.style.display === 'block') {
+                    searchInput.value = '';
+                    clearBtn.style.display = 'none';
+                    performSearch();
+                }
+            });
+        });
+    </script>
     
     <!--==============================
         Footer Area
