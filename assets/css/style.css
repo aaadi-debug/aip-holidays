@@ -39635,6 +39635,7 @@ Tour Card
 .tour-card-wrapper {
   /* Optional: gives subtle shadow & hover effect */
   transition: transform 0.25s ease, box-shadow 0.25s ease;
+  position: relative;
 }
 
 .tour-card-wrapper:hover {
@@ -39651,6 +39652,17 @@ Tour Card
   flex-direction: column;
   height: 100%;
   /* ensures equal height in row */
+}
+
+.main-tour-card__days__label {
+  position: absolute;
+  top: 6px;
+  left: -10px;
+  background-color: orange; 
+  border-radius: 6px; 
+  padding: 6px 12px;
+  color: white;
+  font-weight: 600;
 }
 
 .main-tour-card img {
