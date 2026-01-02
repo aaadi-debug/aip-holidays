@@ -146,6 +146,37 @@
         </div>
     </div>
 
+    <!-- Popup Structure -->
+    <div class="popup-overlay" id="popupOverlay">
+        <div class="popup-content">
+            <button class="close-btn" id="closePopup">&times;</button>
+            <img src="/assets/img/group-tours.jpg">
+            <!-- <h2>Group Tours</h2> -->
+
+            <p>Explore wide range of group tours with AIP Holidays</p>
+            <a href="/group-tours.html" class="th-btn th-icon" onclick="event.stopPropagation();">View Group Tours</a>
+        </div>
+    </div>
+
+    <script>
+        // Show popup when page loads
+        window.onload = function () {
+            document.getElementById('popupOverlay').classList.add('show');
+        };
+
+        // Close popup when clicking the X button
+        document.getElementById('closePopup').onclick = function () {
+            document.getElementById('popupOverlay').classList.remove('show');
+        };
+
+        // Optional: Close popup when clicking outside the content box
+        document.getElementById('popupOverlay').onclick = function (e) {
+            if (e.target === this) {
+                this.classList.remove('show');
+            }
+        };
+    </script>
+
     <!--==============================
     Sidemenu
     ============================== -->

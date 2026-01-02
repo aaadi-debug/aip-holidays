@@ -39658,8 +39658,8 @@ Tour Card
   position: absolute;
   top: 6px;
   left: -10px;
-  background-color: orange; 
-  border-radius: 6px; 
+  background-color: orange;
+  border-radius: 6px;
   padding: 6px 12px;
   color: white;
   font-weight: 600;
@@ -39928,6 +39928,7 @@ Tour Card
 ============================================ */
 .main__iti__header {
   margin-left: -20px;
+  margin-top: -50px;
 }
 
 .main__iti__images__highlights {
@@ -40066,8 +40067,8 @@ Tour Card
 }
 
 .main__iti__ratings {
-  border-bottom: 2px solid var(--theme-color);
-  margin-bottom: 30px;
+  /* border-bottom: 2px solid var(--theme-color); */
+  /* margin-bottom: 30px; */
   display: flex;
   gap: 6px;
   margin-top: -30px;
@@ -40085,6 +40086,9 @@ Tour Card
   display: flex;
   gap: 20px;
   position: relative;
+  margin-top: 30px;
+  padding-top: 30px;
+  border-top: 2px solid var(--theme-color);
 }
 
 /* Left content */
@@ -40233,7 +40237,7 @@ Tour Card
   background: white;
   align-self: flex-start;
   position: sticky;
-  top: 350px;
+  top: 300px;
   /* Adjust based on header */
   height: fit-content;
   z-index: 40;
@@ -40723,4 +40727,68 @@ FAQ Area
     padding-top: 30px;
     padding-bottom: 30px;
   }
+}
+
+/* =============================================
+.popup
+============================================ */
+/* Overlay background */
+.popup-overlay {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Popup content box */
+.popup-content {
+  background: white;
+  padding-bottom: 20px;
+  border-radius: 20px;
+  max-width: 500px;
+  width: 90%;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.popup-content img {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.popup-content h2 {
+  font-size: 36px;
+}
+
+.popup-content p {
+  margin-top: 10px;
+}
+
+/* Close button */
+.popup-overlay .close-btn {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background: transparent;
+  border: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: #fff;
+  padding-bottom: 4px;
+  background-color: var(--theme-color);
+  border-radius: 50%;
+  display: flex;
+}
+
+/* Show the popup */
+.popup-overlay.show {
+  display: flex;
 }
